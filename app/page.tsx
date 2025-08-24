@@ -133,12 +133,12 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-50">
+    <div className="min-h-screen bg-gradient-to-b from-teal-25 via-emerald-25 to-teal-50">
       <Navigation />
 
       <main className="mx-auto max-w-6xl px-4 py-8">
         <section className="my-6">
-          <div className="rounded-2xl bg-gradient-to-br from-teal-400 via-teal-500 to-cyan-500 p-6 text-white shadow-lg">
+          <div className="rounded-2xl bg-gradient-to-br from-teal-400 via-teal-500 to-teal-600 p-6 text-white shadow-lg">
             <h2 className="text-lg font-semibold">Daily Practice</h2>
             <p className="text-sm">Practice with 10 random cards from all decks</p>
             <Link href="/daily-practice">
