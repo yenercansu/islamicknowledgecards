@@ -1,13 +1,13 @@
 "use client"
 
-import { useSession, signOut } from "next-auth/react"
+const disabled = process.env.NEXT_PUBLIC_DISABLE_AUTH === "true"
+
 import { LogOut, User } from "lucide-react"
+import { useSession, signOut } from "next-auth/react"
 
-export function AuthButton() {
+function AuthButtonInner() {
   const { data: session, status } = useSession()
-
   if (status === "loading") return null
-
   if (session) {
     return (
       <div className="flex items-center gap-3">
@@ -26,6 +26,10 @@ export function AuthButton() {
       </div>
     )
   }
-
   return null
+}
+
+export function AuthButton() {
+  if (disabled) return null
+  return <AuthButtonInner />
 }

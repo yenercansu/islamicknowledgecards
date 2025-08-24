@@ -3,14 +3,25 @@
 import { useEffect, useMemo, useState } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { signIn, useSession } from "next-auth/react"
+import Link from "next/link"
+import { ChevronLeft } from "lucide-react"
 
 type Mode = "landing" | "signin" | "signup"
+
+function LoginSessionRedirect({ callbackUrl }: { callbackUrl: string }) {
+  const { status } = useSession()
+  const router = useRouter()
+  useEffect(() => {
+    if (status === "authenticated") router.replace(callbackUrl)
+  }, [status, router, callbackUrl])
+  return null
+}
 
 export default function LoginPage() {
   const router = useRouter()
   const params = useSearchParams()
   const callbackUrl = params.get("callbackUrl") || "/"
-  const { status } = useSession()
+  const authDisabled = process.env.NEXT_PUBLIC_DISABLE_AUTH === "true"
 
   const [mode, setMode] = useState<Mode>("landing")
   const [siEmail, setSiEmail] = useState("")
@@ -23,25 +34,21 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false)
   const [msg, setMsg] = useState<string | null>(null)
 
-  useEffect(() => {
-    if (status === "authenticated") router.replace(callbackUrl)
-  }, [status, router, callbackUrl])
-
   const canSubmitSignin = useMemo(() => siEmail.trim().length > 3 && siPass.trim().length >= 6, [siEmail, siPass])
   const canSubmitSignup = useMemo(
     () => suName.trim().length > 1 && suEmail.trim().length > 3 && suPass.trim().length >= 6,
     [suName, suEmail, suPass],
   )
 
+  const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
+
   const handleEmailSignin = async () => {
     try {
       setLoading(true)
       setMsg(null)
-      await new Promise((r) => setTimeout(r, 600))
-      console.log("Email sign in", { email: siEmail, pass: siPass })
-      setMsg("Signed in simulation ok. Replace with real backend.")
+      await sleep(500)
       router.replace(callbackUrl)
-    } catch (e: any) {
+    } catch {
       setMsg("Sign in failed. Please try again.")
     } finally {
       setLoading(false)
@@ -52,11 +59,9 @@ export default function LoginPage() {
     try {
       setLoading(true)
       setMsg(null)
-      await new Promise((r) => setTimeout(r, 600))
-      console.log("Sign up", { name: suName, email: suEmail, pass: suPass })
-      setMsg("Sign up simulation ok. Replace with real backend.")
+      await sleep(500)
       router.replace(callbackUrl)
-    } catch (e: any) {
+    } catch {
       setMsg("Sign up failed. Please try again.")
     } finally {
       setLoading(false)
@@ -64,163 +69,205 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-teal-50 to-white p-6">
-      <div className="w-full max-w-md rounded-2xl shadow-lg bg-white p-8">
-        <h1 className="text-2xl font-semibold text-center mb-2">Islamic Studies</h1>
-        <p className="text-center text-sm text-gray-600 mb-6">Sign in to access your flashcards</p>
+    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white relative">
+      {!authDisabled && <LoginSessionRedirect callbackUrl={callbackUrl} />}
 
-        {mode === "landing" && (
-          <div className="space-y-3">
-            <button
-              onClick={() => signIn?.("google", { callbackUrl })}
-              className="w-full rounded-xl border px-4 py-3 font-medium hover:bg-gray-50 flex items-center justify-center gap-2"
-            >
-              <GoogleIcon />
-              <span>Sign in with Google</span>
-            </button>
+      <div className="absolute left-4 top-4 z-10">
+        <button
+          onClick={() => router.back()}
+          aria-label="Back"
+          className="inline-flex items-center justify-center rounded-full border bg-white shadow-sm hover:bg-gray-50 active:scale-95 transition px-2.5 py-2"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+      </div>
 
-            <button
-              onClick={() => setMode("signin")}
-              className="w-full rounded-xl border px-4 py-3 font-medium hover:bg-gray-50"
-            >
-              Sign in
-            </button>
+      <div className="w-full max-w-md mx-auto px-6 py-20">
+        <div className="rounded-2xl shadow-lg bg-white p-8">
+          <h1 className="text-2xl font-semibold text-center mb-2">Islamic Studies</h1>
+          <p className="text-center text-sm text-gray-600 mb-6">Sign in to access your flashcards</p>
 
-            <div className="text-center text-sm text-gray-600 pt-2">
-              Not a user yet?{" "}
-              <button className="text-teal-700 hover:underline" onClick={() => setMode("signup")}>
-                Sign up
+          {mode === "landing" && (
+            <div className="space-y-3">
+              <button
+                onClick={() => signIn?.("google", { callbackUrl })}
+                disabled={authDisabled}
+                className={`w-full rounded-xl border px-4 py-3 font-medium ${
+                  authDisabled ? "bg-gray-100 text-gray-400 cursor-not-allowed" : "hover:bg-gray-50"
+                } flex items-center justify-center gap-2`}
+                title={authDisabled ? "Temporarily disabled" : "Sign in with Google"}
+              >
+                <GoogleIcon />
+                <span>Sign in with Google</span>
               </button>
-            </div>
-          </div>
-        )}
 
-        {mode === "signin" && (
-          <div className="space-y-4">
-            <label className="block">
-              <span className="text-sm text-gray-700">Email</span>
-              <input
-                type="email"
-                className="mt-1 w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-teal-200"
-                value={siEmail}
-                onChange={(e) => setSiEmail(e.target.value)}
-                placeholder="you@example.com"
-              />
-            </label>
-
-            <label className="block">
-              <span className="text-sm text-gray-700">Password</span>
-              <div className="mt-1 relative">
-                <input
-                  type={showSiPass ? "text" : "password"}
-                  className="w-full rounded-xl border px-3 py-2 pr-10 outline-none focus:ring-2 focus:ring-teal-200"
-                  value={siPass}
-                  onChange={(e) => setSiPass(e.target.value)}
-                  placeholder="your password"
-                />
-                <button
-                  type="button"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 text-sm text-gray-600"
-                  onClick={() => setShowSiPass((v) => !v)}
-                >
-                  {showSiPass ? "Hide" : "Show"}
-                </button>
-              </div>
-            </label>
-
-            <button
-              onClick={handleEmailSignin}
-              disabled={!canSubmitSignin || loading}
-              className="w-full rounded-xl border px-4 py-3 font-medium hover:bg-gray-50 disabled:opacity-50"
-            >
-              {loading ? "Please wait..." : "Sign in"}
-            </button>
-
-            <div className="text-center text-sm text-gray-600">
-              Not a user yet?{" "}
-              <button className="text-teal-700 hover:underline" onClick={() => setMode("signup")}>
-                Sign up
-              </button>
-            </div>
-
-            <div className="text-center">
-              <button className="text-xs text-gray-500 hover:underline" onClick={() => setMode("landing")}>
-                Back
-              </button>
-            </div>
-
-            {msg && <p className="text-center text-xs text-gray-600 mt-2">{msg}</p>}
-          </div>
-        )}
-
-        {mode === "signup" && (
-          <div className="space-y-4">
-            <label className="block">
-              <span className="text-sm text-gray-700">Name</span>
-              <input
-                type="text"
-                className="mt-1 w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-teal-200"
-                value={suName}
-                onChange={(e) => setSuName(e.target.value)}
-                placeholder="Your name"
-              />
-            </label>
-
-            <label className="block">
-              <span className="text-sm text-gray-700">Email</span>
-              <input
-                type="email"
-                className="mt-1 w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-teal-200"
-                value={suEmail}
-                onChange={(e) => setSuEmail(e.target.value)}
-                placeholder="you@example.com"
-              />
-            </label>
-
-            <label className="block">
-              <span className="text-sm text-gray-700">Create password</span>
-              <div className="mt-1 relative">
-                <input
-                  type={showSuPass ? "text" : "password"}
-                  className="w-full rounded-xl border px-3 py-2 pr-10 outline-none focus:ring-2 focus:ring-teal-200"
-                  value={suPass}
-                  onChange={(e) => setSuPass(e.target.value)}
-                  placeholder="at least 6 characters"
-                />
-                <button
-                  type="button"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 text-sm text-gray-600"
-                  onClick={() => setShowSuPass((v) => !v)}
-                >
-                  {showSuPass ? "Hide" : "Show"}
-                </button>
-              </div>
-            </label>
-
-            <button
-              onClick={handleEmailSignup}
-              disabled={!canSubmitSignup || loading}
-              className="w-full rounded-xl border px-4 py-3 font-medium hover:bg-gray-50 disabled:opacity-50"
-            >
-              {loading ? "Please wait..." : "Create account"}
-            </button>
-
-            <div className="text-center text-sm text-gray-600">
-              Already a user?{" "}
-              <button className="text-teal-700 hover:underline" onClick={() => setMode("signin")}>
+              <button
+                onClick={() => setMode("signin")}
+                className="w-full rounded-xl border px-4 py-3 font-medium hover:bg-gray-50"
+              >
                 Sign in
               </button>
-            </div>
 
-            <div className="text-center">
-              <button className="text-xs text-gray-500 hover:underline" onClick={() => setMode("landing")}>
-                Back
+              <div className="text-center text-sm text-gray-600 pt-2">
+                Not a user yet?{" "}
+                <button className="text-teal-700 hover:underline" onClick={() => setMode("signup")}>
+                  Sign up
+                </button>
+              </div>
+            </div>
+          )}
+
+          {mode === "signin" && (
+            <div className="space-y-4">
+              <div className="flex items-center justify-between mb-4">
+                <Link
+                  href="/"
+                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-teal-700 transition-colors"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="m15 18-6-6 6-6" />
+                  </svg>
+                  Back to Home
+                </Link>
+              </div>
+
+              <label className="block">
+                <span className="text-sm text-gray-700">Email</span>
+                <input
+                  type="email"
+                  className="mt-1 w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-teal-200"
+                  value={siEmail}
+                  onChange={(e) => setSiEmail(e.target.value)}
+                  placeholder="you@example.com"
+                />
+              </label>
+
+              <label className="block">
+                <span className="text-sm text-gray-700">Password</span>
+                <div className="mt-1 relative">
+                  <input
+                    type={showSiPass ? "text" : "password"}
+                    className="w-full rounded-xl border px-3 py-2 pr-10 outline-none focus:ring-2 focus:ring-teal-200"
+                    value={siPass}
+                    onChange={(e) => setSiPass(e.target.value)}
+                    placeholder="your password"
+                  />
+                  <button
+                    type="button"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 text-sm text-gray-600"
+                    onClick={() => setShowSiPass((v) => !v)}
+                  >
+                    {showSiPass ? "Hide" : "Show"}
+                  </button>
+                </div>
+              </label>
+
+              <button
+                onClick={handleEmailSignin}
+                disabled={!canSubmitSignin || loading}
+                className="w-full rounded-xl border px-4 py-3 font-medium hover:bg-gray-50 disabled:opacity-50"
+              >
+                {loading ? "Please wait..." : "Sign in"}
               </button>
-            </div>
 
-            {msg && <p className="text-center text-xs text-gray-600 mt-2">{msg}</p>}
-          </div>
-        )}
+              <div className="text-center text-sm text-gray-600">
+                Not a user yet?{" "}
+                <button className="text-teal-700 hover:underline" onClick={() => setMode("signup")}>
+                  Sign up
+                </button>
+              </div>
+
+              <div className="text-center">
+                <button className="text-xs text-gray-500 hover:underline" onClick={() => setMode("landing")}>
+                  Back
+                </button>
+              </div>
+
+              {msg && <p className="text-center text-xs text-gray-600 mt-2">{msg}</p>}
+            </div>
+          )}
+
+          {mode === "signup" && (
+            <div className="space-y-4">
+              <div className="flex items-center justify-between mb-4">
+                <Link
+                  href="/"
+                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-teal-700 transition-colors"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="m15 18-6-6 6-6" />
+                  </svg>
+                  Back to Home
+                </Link>
+              </div>
+
+              <label className="block">
+                <span className="text-sm text-gray-700">Name</span>
+                <input
+                  type="text"
+                  className="mt-1 w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-teal-200"
+                  value={suName}
+                  onChange={(e) => setSuName(e.target.value)}
+                  placeholder="Your name"
+                />
+              </label>
+
+              <label className="block">
+                <span className="text-sm text-gray-700">Email</span>
+                <input
+                  type="email"
+                  className="mt-1 w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-teal-200"
+                  value={suEmail}
+                  onChange={(e) => setSuEmail(e.target.value)}
+                  placeholder="you@example.com"
+                />
+              </label>
+
+              <label className="block">
+                <span className="text-sm text-gray-700">Create password</span>
+                <div className="mt-1 relative">
+                  <input
+                    type={showSuPass ? "text" : "password"}
+                    className="w-full rounded-xl border px-3 py-2 pr-10 outline-none focus:ring-2 focus:ring-teal-200"
+                    value={suPass}
+                    onChange={(e) => setSuPass(e.target.value)}
+                    placeholder="at least 6 characters"
+                  />
+                  <button
+                    type="button"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 text-sm text-gray-600"
+                    onClick={() => setShowSuPass((v) => !v)}
+                  >
+                    {showSuPass ? "Hide" : "Show"}
+                  </button>
+                </div>
+              </label>
+
+              <button
+                onClick={handleEmailSignup}
+                disabled={!canSubmitSignup || loading}
+                className="w-full rounded-xl border px-4 py-3 font-medium hover:bg-gray-50 disabled:opacity-50"
+              >
+                {loading ? "Please wait..." : "Create account"}
+              </button>
+
+              <div className="text-center text-sm text-gray-600">
+                Already a user?{" "}
+                <button className="text-teal-700 hover:underline" onClick={() => setMode("signin")}>
+                  Sign in
+                </button>
+              </div>
+
+              <div className="text-center">
+                <button className="text-xs text-gray-500 hover:underline" onClick={() => setMode("landing")}>
+                  Back
+                </button>
+              </div>
+
+              {msg && <p className="text-center text-xs text-gray-600 mt-3">{msg}</p>}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )

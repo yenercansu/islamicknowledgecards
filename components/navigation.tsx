@@ -1,54 +1,48 @@
 "use client"
 
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowLeft, Home, Settings } from "lucide-react"
+import { useEffect, useState } from "react"
+import { useSession } from "next-auth/react"
 
-interface NavigationProps {
-  title?: string
-  showBackButton?: boolean
-  backHref?: string
-}
+// Sticky header örnek
+const Navigation = () => {
+  const { status, data } = useSession()
+  const [scrolled, setScrolled] = useState(false)
 
-export function Navigation({ title, showBackButton = false, backHref = "/" }: NavigationProps) {
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    window.addEventListener("scroll", onScroll)
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
   return (
-    <header className="border-b border-border bg-card sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            {showBackButton && (
-              <Link href={backHref}>
-                <Button variant="ghost" size="sm">
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  Back
-                </Button>
-              </Link>
-            )}
-            <div>
-              <h1 className="text-2xl font-bold text-foreground">{title || "Islamic Studies"}</h1>
-              {!title && <p className="text-muted-foreground text-sm">Flashcard Quiz App</p>}
-            </div>
-          </div>
+    <header className={`w-full top-0 z-40 ${scrolled ? "bg-white/70 backdrop-blur border-b" : "bg-transparent"}`}>
+      <div className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
+        <Link href="/" className="font-semibold">
+          Islamic Knowledge Cards
+        </Link>
 
-          <div className="flex items-center gap-3">
-            {showBackButton && (
-              <Link href="/">
-                <Button variant="outline" size="sm">
-                  <Home className="h-4 w-4 mr-2" />
-                  Home
-                </Button>
-              </Link>
-            )}
+        <nav className="flex items-center gap-6">
+          <Link href="/" className="text-sm font-medium hover:text-teal-600 transition-colors">
+            HOME
+          </Link>
+          <Link href="/daily-practice" className="text-sm font-medium hover:text-teal-600 transition-colors">
+            PRACTICE
+          </Link>
+          <Link href="/saved" className="text-sm font-medium hover:text-teal-600 transition-colors">
+            SAVED
+          </Link>
+        </nav>
 
-            <Link href="/settings">
-              <Button variant="outline" size="sm">
-                <Settings className="h-4 w-4 mr-2" />
-                Settings
-              </Button>
-            </Link>
-          </div>
+        <div className="flex items-center gap-2">
+          <Link href="/login" className="rounded-full border px-3 py-1.5 text-sm hover:bg-gray-50">
+            Sign in
+          </Link>
         </div>
       </div>
     </header>
   )
 }
+
+export { Navigation }
+export default Navigation

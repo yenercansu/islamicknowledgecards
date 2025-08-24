@@ -8,8 +8,8 @@ import { getUserProgress } from "@/lib/storage"
 import type { Deck } from "@/types/flashcard"
 import Link from "next/link"
 import { DeckCard } from "@/components/deck-card"
-import { Search, Monitor, Settings } from "lucide-react"
-import { AuthButton } from "@/components/auth-button"
+import { Search } from "lucide-react"
+import Navigation from "@/components/navigation"
 
 // Icon mapping for decks
 const deckIconMap = {
@@ -133,92 +133,53 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-gray-900">Islamic Studies</h1>
-            <div className="flex items-center gap-2">
-              <Button variant="ghost" size="sm" className="w-10 h-10 p-0">
-                <Monitor className="w-5 h-5 text-teal-600" />
-              </Button>
-              <Link href="/settings">
-                <Button variant="ghost" size="sm" className="w-10 h-10 p-0">
-                  <Settings className="w-5 h-5 text-teal-600" />
-                </Button>
-              </Link>
-              <AuthButton />
-            </div>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-50">
+      <Navigation />
 
-      <nav className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-center gap-1">
-            <Button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-full">Home</Button>
+      <main className="mx-auto max-w-6xl px-4 py-8">
+        <section className="my-6">
+          <div className="rounded-2xl bg-gradient-to-br from-teal-400 via-teal-500 to-cyan-500 p-6 text-white shadow-lg">
+            <h2 className="text-lg font-semibold">Daily Practice</h2>
+            <p className="text-sm">Practice with 10 random cards from all decks</p>
             <Link href="/daily-practice">
-              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 px-6 py-2 rounded-full">
-                Daily
-              </Button>
+              <button className="mt-4 rounded-full bg-white text-teal-600 px-4 py-2">Start Practice</button>
             </Link>
-            <Link href="/saved">
-              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 px-6 py-2 rounded-full">
-                Saved
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
-
-      <main className="container mx-auto px-4 py-8">
-        <div className="mx-[-4px] sm:mx-0 mb-6 rounded-2xl shadow bg-gradient-to-br from-teal-200 to-teal-400 p-5 sm:p-6">
-          <div className="flex items-center justify-between gap-3">
-            <div>
-              <h2 className="text-xl font-bold">Daily Practice</h2>
-              <p className="text-sm opacity-80">Practice with 10 random cards from all decks</p>
+            <div className="mt-3 h-2 rounded bg-white/50 overflow-hidden">
+              <div className="h-full bg-teal-700" style={{ width: `${percent}%` }} />
             </div>
-            <Link href="/daily-practice" className="px-4 py-2 rounded-xl bg-white text-teal-700 font-semibold shadow">
-              Start Practice
-            </Link>
+            <div className="mt-1 text-sm">{percent}% today</div>
           </div>
-          <div className="mt-3 h-2 rounded bg-white/50 overflow-hidden">
-            <div className="h-full bg-teal-700" style={{ width: `${percent}%` }} />
-          </div>
-          <div className="mt-1 text-sm">{percent}% today</div>
-        </div>
+        </section>
 
-        <div className="bg-gradient-to-br from-teal-400 to-teal-600 rounded-3xl shadow-lg p-8 mb-8 text-white">
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-2">Choose Your Deck</h2>
-            <p className="text-teal-100 mb-6">Select a topic to start learning</p>
+        <section className="my-6">
+          <h2 className="text-2xl font-bold">Choose Your Deck</h2>
+          <p className="text-gray-600 mb-6">Select a topic to start learning</p>
 
-            <div className="relative max-w-md mx-auto">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <Input
-                type="text"
-                placeholder="Search decks..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 bg-white text-gray-900 border-0 rounded-full"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-          {filteredDecks.map((deck) => (
-            <DeckCard
-              key={deck.id}
-              icon={deckIconMap[deck.name as keyof typeof deckIconMap] || "book"}
-              color={deckColorMap[deck.name as keyof typeof deckColorMap] || "bg-gray-100"}
-              name={deck.name}
-              cardsCount={deck.cards.length}
-              progress={deck.progress}
-              href={`/deck/${deck.id}`}
+          <div className="relative max-w-md mb-6">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <Input
+              type="text"
+              placeholder="Search decks..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10 bg-white text-gray-900 border rounded-full"
             />
-          ))}
-        </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {filteredDecks.map((deck) => (
+              <DeckCard
+                key={deck.id}
+                icon={deckIconMap[deck.name as keyof typeof deckIconMap] || "book"}
+                color={deckColorMap[deck.name as keyof typeof deckColorMap] || "bg-gray-100"}
+                name={deck.name}
+                cardsCount={deck.cards.length}
+                progress={deck.progress}
+                href={`/deck/${deck.id}`}
+              />
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   )
