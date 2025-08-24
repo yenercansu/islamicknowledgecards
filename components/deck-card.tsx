@@ -49,7 +49,7 @@ export function DeckCard({ icon, color, name, cardsCount, progress, href }: Deck
 
   return (
     <Link href={href}>
-      <Card className="rounded-2xl hover:shadow-md transition-all duration-200 cursor-pointer group shadow-md bg-transparent">
+      <Card className="rounded-2xl hover:shadow-md transition-all duration-200 cursor-pointer group shadow-md bg-white">
         <CardContent className="p-6">
           <div className="flex flex-col items-center text-center space-y-4">
             {/* Icon */}
