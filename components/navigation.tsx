@@ -24,7 +24,7 @@ const Navigation = () => {
       <Link
         href={href}
         className={cn(
-          "text-sm transition-colors",
+          "text-sm transition-colors font-bold text-teal-400 opacity-90 rounded-2xl",
           active ? "font-bold text-teal-800" : "font-medium text-teal-700 hover:font-bold hover:text-teal-800",
         )}
       >
@@ -36,11 +36,11 @@ const Navigation = () => {
   return (
     <header className={`w-full top-0 z-40 ${scrolled ? "bg-white/70 backdrop-blur border-b" : "bg-transparent"}`}>
       <div className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-center relative">
-        <Link href="/" className="font-semibold absolute left-4">
+        <Link href="/" className="font-semibold absolute left-4 text-teal-400">
           Islamic Knowledge Cards
         </Link>
 
-        <nav className="flex items-center gap-10">
+        <nav className="flex items-center gap-10 shadow-none">
           {navItem("/", "HOME")}
           {navItem("/daily-practice", "PRACTICE")}
           {navItem("/saved", "SAVED")}

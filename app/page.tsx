@@ -142,7 +142,7 @@ export default function HomePage() {
             <h2 className="text-lg font-semibold">Daily Practice</h2>
             <p className="text-sm">Practice with 10 random cards from all decks</p>
             <Link href="/daily-practice">
-              <button className="mt-4 rounded-full bg-white text-teal-600 px-4 py-2">Start Practice</button>
+              <button className="mt-4 rounded-full bg-white text-teal-600 px-4 py-2 shadow">Start Practice</button>
             </Link>
             <div className="mt-3 h-2 rounded bg-white/50 overflow-hidden">
               <div className="h-full bg-teal-700" style={{ width: `${percent}%` }} />
