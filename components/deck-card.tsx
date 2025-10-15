@@ -11,7 +11,7 @@ interface DeckCardProps {
 export function DeckCard({ name, cardsCount, progress, href }: DeckCardProps) {
   return (
     <Link href={href}>
-      <div className="rounded-2xl bg-white border-2 border-teal-200 p-6 hover:shadow-lg transition-all duration-200 cursor-pointer group">
+      <div className="rounded-2xl bg-white border-teal-200 p-6 hover:shadow-lg transition-all duration-200 cursor-pointer group border-2">
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center">

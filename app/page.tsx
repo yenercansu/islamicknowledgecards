@@ -136,17 +136,17 @@ export default function HomePage() {
     <div className="min-h-screen bg-gray-50">
       <main className="mx-auto max-w-7xl px-6 py-8">
         <section className="mb-12">
-          <div className="rounded-3xl bg-gradient-to-br from-teal-100 to-cyan-100 p-8 border-2 border-teal-200">
+          <div className="rounded-3xl bg-gradient-to-br from-teal-100 to-cyan-100 p-8 border-teal-200 border-2 shadow-lg">
             <div className="flex items-start gap-3 mb-4">
-              <Star className="w-6 h-6 text-teal-700 fill-teal-700" />
+              <Star className="w-6 h-6 text-teal-700 fill-teal-700 border-[rgba(151,246,229,1)]" />
               <div>
-                <h2 className="text-xl font-bold text-gray-900 font-sans">Daily Practice</h2>
+                <h2 className="font-bold text-gray-900 font-sans text-2xl">Daily Practice</h2>
                 <p className="text-sm text-gray-700 mt-1 font-sans">Practice with 10 random cards from all decks</p>
               </div>
             </div>
 
             <Link href="/daily-practice">
-              <button className="mt-4 px-6 py-2.5 rounded-full bg-teal-600 text-white text-sm font-medium hover:bg-teal-700 transition-colors font-sans">
+              <button className="mt-4 px-6 py-2.5 rounded-full bg-teal-600 text-white text-sm font-medium hover:bg-teal-700 transition-colors font-sans border-[10px] shadow-md border-[rgba(151,246,229,1)]">
                 Start Practice
               </button>
             </Link>

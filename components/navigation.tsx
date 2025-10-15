@@ -18,7 +18,7 @@ const Navigation = () => {
     return (
       <Link
         href={href}
-        className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all uppercase tracking-wide font-sans ${
+        className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all uppercase tracking-wide font-sans shadow-none ${
           active ? "bg-teal-600 text-white" : "text-gray-700 hover:bg-gray-100"
         }`}
       >
