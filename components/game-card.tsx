@@ -115,8 +115,8 @@ export default function GameCard({
 
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-br from-teal-300 via-teal-400 to-teal-500">
-      {/* top left: back arrow + deck tag */}
-      <div className="absolute left-2 sm:left-4 top-2 sm:top-4 z-20 flex items-center gap-2">
+      {/* top left: back arrow only */}
+      <div className="absolute left-2 sm:left-4 top-2 sm:top-4 z-20">
         <button
           aria-label="Back"
           onClick={onBack}
@@ -132,17 +132,17 @@ export default function GameCard({
             />
           </svg>
         </button>
+      </div>
+
+      <div className="absolute top-2 sm:top-4 left-1/2 -translate-x-1/2 z-20 flex flex-col sm:flex-row items-center gap-2">
+        <span className="px-3 sm:px-4 py-1 rounded-full bg-white/25 text-white text-xs sm:text-sm font-semibold backdrop-blur font-sans">
+          Question {Math.min(index + 1, total)} of {total || 0}
+        </span>
         {card.section && (
           <span className="px-2 sm:px-3 py-1 rounded-full bg-white/25 text-white text-xs sm:text-sm font-semibold backdrop-blur font-sans">
             {card.section}
           </span>
         )}
-      </div>
-
-      <div className="absolute top-2 sm:top-4 left-1/2 -translate-x-1/2 z-20">
-        <span className="px-3 sm:px-4 py-1 rounded-full bg-white/25 text-white text-xs sm:text-sm font-semibold backdrop-blur font-sans">
-          Question {Math.min(index + 1, total)} of {total || 0}
-        </span>
       </div>
 
       <button
@@ -169,7 +169,7 @@ export default function GameCard({
       </button>
 
       {/* card wrapper */}
-      <div className="flex items-center justify-center px-3 sm:px-4 pt-14 sm:pt-16 pb-24 sm:pb-28">
+      <div className="flex items-center justify-center px-3 sm:px-4 pt-20 sm:pt-16 pb-24 sm:pb-28">
         <style>{`
           .perspective { perspective: 1200px; }
           .preserve-3d { transform-style: preserve-3d; }
