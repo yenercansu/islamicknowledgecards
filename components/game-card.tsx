@@ -116,13 +116,13 @@ export default function GameCard({
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-br from-teal-300 via-teal-400 to-teal-500">
       {/* top left: back arrow + deck tag */}
-      <div className="absolute left-4 top-4 z-20 flex items-center gap-2">
+      <div className="absolute left-2 sm:left-4 top-2 sm:top-4 z-20 flex items-center gap-2">
         <button
           aria-label="Back"
           onClick={onBack}
-          className="h-11 w-11 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur flex items-center justify-center shadow"
+          className="h-9 w-9 sm:h-11 sm:w-11 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur flex items-center justify-center shadow"
         >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-white">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-white sm:w-[22px] sm:h-[22px]">
             <path
               d="M15 6l-6 6 6 6"
               stroke="currentColor"
@@ -133,14 +133,14 @@ export default function GameCard({
           </svg>
         </button>
         {card.section && (
-          <span className="px-3 py-1 rounded-full bg-white/25 text-white text-sm font-semibold backdrop-blur font-sans">
+          <span className="px-2 sm:px-3 py-1 rounded-full bg-white/25 text-white text-xs sm:text-sm font-semibold backdrop-blur font-sans">
             {card.section}
           </span>
         )}
       </div>
 
-      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20">
-        <span className="px-4 py-1 rounded-full bg-white/25 text-white text-sm font-semibold backdrop-blur font-sans">
+      <div className="absolute top-2 sm:top-4 left-1/2 -translate-x-1/2 z-20">
+        <span className="px-3 sm:px-4 py-1 rounded-full bg-white/25 text-white text-xs sm:text-sm font-semibold backdrop-blur font-sans">
           Question {Math.min(index + 1, total)} of {total || 0}
         </span>
       </div>
@@ -148,22 +148,28 @@ export default function GameCard({
       <button
         onClick={onSave}
         aria-label="Save"
-        className="absolute top-4 right-4 z-20 h-10 w-10 rounded-full hover:bg-white/20 grid place-items-center"
+        className="absolute top-2 sm:top-4 right-2 sm:right-4 z-20 h-9 w-9 sm:h-10 sm:w-10 rounded-full hover:bg-white/20 grid place-items-center"
         title={saved ? "Saved" : "Save"}
       >
         {saved ? (
-          <svg width="18" height="18" viewBox="0 0 24 24" className="text-teal-700" fill="currentColor">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            className="text-teal-700 sm:w-[18px] sm:h-[18px]"
+            fill="currentColor"
+          >
             <path d="M6 2h12v20l-6-4-6 4V2z" />
           </svg>
         ) : (
-          <svg width="18" height="18" viewBox="0 0 24 24" className="text-teal-700" fill="none">
+          <svg width="16" height="16" viewBox="0 0 24 24" className="text-teal-700 sm:w-[18px] sm:h-[18px]" fill="none">
             <path d="M6 2h12v20l-6-4-6 4V2z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
           </svg>
         )}
       </button>
 
       {/* card wrapper */}
-      <div className="flex items-center justify-center px-4 pt-16 pb-28">
+      <div className="flex items-center justify-center px-3 sm:px-4 pt-14 sm:pt-16 pb-24 sm:pb-28">
         <style>{`
           .perspective { perspective: 1200px; }
           .preserve-3d { transform-style: preserve-3d; }
@@ -182,44 +188,43 @@ export default function GameCard({
           >
             {/* FRONT — spacious layout */}
             <div
-              className={`absolute inset-0 backface-hidden rounded-3xl border font-sans ${isCorrect ? "border-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.5)]" : "border-black/10"} bg-white shadow-xl p-8 md:p-10 text-slate-900`}
+              className={`absolute inset-0 backface-hidden rounded-3xl border font-sans ${isCorrect ? "border-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.5)]" : "border-black/10"} bg-white shadow-xl p-4 sm:p-8 md:p-10 text-slate-900`}
               onClick={handleAnyClick}
             >
               <div className="h-full w-full mx-auto max-w-[650px] flex flex-col">
                 {/* Question */}
                 <div className="flex-1 flex items-center justify-center">
-                  <h1 className="text-center font-extrabold text-2xl md:text-3xl lg:text-4xl leading-[1.25] md:leading-[1.2] tracking-tight">
+                  <h1 className="text-center font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[1.3] sm:leading-[1.25] md:leading-[1.2] tracking-tight px-2">
                     {card.question}
                   </h1>
                 </div>
 
                 {/* Divider */}
-                <div className="mx-auto mt-3 mb-6 h-1 w-[60%] bg-teal-600 rounded-full" />
+                <div className="mx-auto mt-3 mb-4 sm:mb-6 h-1 w-[60%] bg-teal-600 rounded-full" />
 
-                {/* Answers row */}
-                <div className="mb-2 grid grid-cols-[1fr_auto_1fr] items-center gap-6 md:gap-8 max-w-[650px] mx-auto">
+                <div className="mb-2 flex flex-col sm:grid sm:grid-cols-[1fr_auto_1fr] items-center gap-3 sm:gap-6 md:gap-8 max-w-[650px] mx-auto w-full">
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
                       choose("A")
                     }}
-                    className={`py-4 border-2 ${
+                    className={`py-3 sm:py-4 border-2 ${
                       selected === "A" ? "bg-green-50 border-green-200" : "bg-white hover:bg-teal-50"
-                    } text-black font-semibold text-base md:text-lg border-transparent rounded-3xl w-full px-6`}
+                    } text-black font-semibold text-sm sm:text-base md:text-lg border-transparent rounded-3xl w-full px-4 sm:px-6`}
                   >
                     {card.answerA}
                   </button>
 
-                  <span className="text-teal-700 font-semibold select-none text-base md:text-lg">or</span>
+                  <span className="text-teal-700 font-semibold select-none text-sm sm:text-base md:text-lg">or</span>
 
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
                       choose("B")
                     }}
-                    className={`py-4 border-2 ${
+                    className={`py-3 sm:py-4 border-2 ${
                       selected === "B" ? "bg-green-50 border-green-200" : "bg-white hover:bg-teal-50"
-                    } text-black font-semibold text-base md:text-lg border-transparent rounded-3xl w-full px-6`}
+                    } text-black font-semibold text-sm sm:text-base md:text-lg border-transparent rounded-3xl w-full px-4 sm:px-6`}
                   >
                     {card.answerB}
                   </button>
@@ -229,18 +234,18 @@ export default function GameCard({
 
             {/* BACK */}
             <div
-              className={`absolute inset-0 backface-hidden rounded-3xl border ${isCorrect ? "border-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.5)]" : "border-black/10"} bg-white shadow-xl p-8 text-slate-900`}
+              className={`absolute inset-0 backface-hidden rounded-3xl border ${isCorrect ? "border-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.5)]" : "border-black/10"} bg-white shadow-xl p-4 sm:p-8 text-slate-900`}
               style={{ transform: "rotateY(180deg)" }}
             >
-              <div className="h-full grid grid-cols-1 md:grid-cols-[1fr_3px_1fr] gap-6 items-center text-center">
-                <div className="p-4">
-                  <div className="text-sm font-bold mb-2">Answer A</div>
-                  <div className="text-base leading-relaxed">{card.explanationA}</div>
+              <div className="h-full grid grid-cols-1 md:grid-cols-[1fr_3px_1fr] gap-4 sm:gap-6 items-center text-center overflow-y-auto">
+                <div className="p-2 sm:p-4">
+                  <div className="text-xs sm:text-sm font-bold mb-2">Answer A</div>
+                  <div className="text-sm sm:text-base leading-relaxed">{card.explanationA}</div>
                 </div>
                 <div className="hidden md:block h-full w-[3px] bg-teal-600 rounded-full" />
-                <div className="p-4">
-                  <div className="text-sm font-bold mb-2">Answer B</div>
-                  <div className="text-base leading-relaxed">{card.explanationB}</div>
+                <div className="p-2 sm:p-4">
+                  <div className="text-xs sm:text-sm font-bold mb-2">Answer B</div>
+                  <div className="text-sm sm:text-base leading-relaxed">{card.explanationB}</div>
                 </div>
               </div>
             </div>
@@ -248,22 +253,22 @@ export default function GameCard({
         </div>
       </div>
 
-      <div className="fixed bottom-4 left-0 right-0 px-4">
-        <div className="grid grid-cols-3 gap-3 max-w-[720px] mx-auto">
+      <div className="fixed bottom-3 sm:bottom-4 left-0 right-0 px-3 sm:px-4">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3 max-w-[720px] mx-auto">
           <button
             onClick={goPrev}
-            className="h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold"
+            className="h-11 sm:h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold text-sm sm:text-base"
           >
             Back
           </button>
 
           <button
             onClick={goRandom}
-            className="h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold flex items-center justify-center gap-2 font-sans"
+            className="h-11 sm:h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold flex items-center justify-center gap-1 sm:gap-2 font-sans text-sm sm:text-base"
             aria-label="Randomize"
             title="Randomize question"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-white">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-white sm:w-[18px] sm:h-[18px]">
               <path
                 d="M4 4h4l3 4 3-4h6M4 20h4l3-4 3 4h6"
                 stroke="currentColor"
@@ -272,12 +277,13 @@ export default function GameCard({
                 strokeLinejoin="round"
               />
             </svg>
-            Randomize
+            <span className="hidden xs:inline">Randomize</span>
+            <span className="xs:hidden">Random</span>
           </button>
 
           <button
             onClick={goNext}
-            className="h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold font-sans"
+            className="h-11 sm:h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold font-sans text-sm sm:text-base"
           >
             Next
           </button>

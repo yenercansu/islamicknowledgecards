@@ -18,7 +18,7 @@ const Navigation = () => {
     return (
       <Link
         href={href}
-        className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all uppercase tracking-wide font-sans shadow-none ${
+        className={`px-4 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all uppercase tracking-wide font-sans shadow-none ${
           active ? "bg-teal-600 text-white" : "text-gray-700 hover:bg-gray-100"
         }`}
       >
@@ -37,18 +37,18 @@ const Navigation = () => {
   return (
     <>
       <header className="w-full bg-white border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between font-sans">
-          <Link href="/" className="font-bold text-gray-900 text-xl font-sans">
+        <div className="mx-auto max-w-7xl px-3 sm:px-6 py-3 sm:py-0 sm:h-20 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0 font-sans">
+          <Link href="/" className="hidden sm:block font-bold text-gray-900 text-xl font-sans">
             Islamic Knowledge Cards
           </Link>
 
-          <nav className="flex items-center gap-2">
+          <nav className="flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto">
             {navItem("/", "HOME")}
             {navItem("/daily-practice", "PRACTICE")}
             {navItem("/saved", "SAVED")}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             {isSignedIn ? (
               <>
                 {/* Signed in: Show profile icon and SIGN OUT button */}
@@ -57,7 +57,7 @@ const Navigation = () => {
                     onClick={() => setShowProfileMenu(!showProfileMenu)}
                     className="p-2.5 rounded-full hover:bg-gray-100 transition-colors"
                   >
-                    <User className="w-6 h-6 text-gray-700" />
+                    <User className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
                   </button>
 
                   {showProfileMenu && (
@@ -77,7 +77,7 @@ const Navigation = () => {
 
                 <button
                   onClick={() => setIsSignedIn(false)}
-                  className="px-6 py-2.5 rounded-full bg-teal-600 text-white text-sm font-semibold hover:bg-teal-700 transition-colors uppercase tracking-wide"
+                  className="px-4 sm:px-6 py-2.5 rounded-full bg-teal-600 text-white text-xs sm:text-sm font-semibold hover:bg-teal-700 transition-colors uppercase tracking-wide"
                 >
                   SIGN OUT
                 </button>
@@ -87,7 +87,7 @@ const Navigation = () => {
                 {/* Not signed in: Show SIGN IN button only */}
                 <Link
                   href="/login"
-                  className="px-6 py-2.5 rounded-full bg-teal-600 text-white text-sm font-semibold hover:bg-teal-700 transition-colors uppercase tracking-wide font-sans"
+                  className="px-4 sm:px-6 py-2.5 rounded-full bg-teal-600 text-white text-xs sm:text-sm font-semibold hover:bg-teal-700 transition-colors uppercase tracking-wide font-sans"
                 >
                   SIGN IN
                 </Link>

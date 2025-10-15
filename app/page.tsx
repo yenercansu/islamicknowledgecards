@@ -134,39 +134,41 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <main className="mx-auto max-w-7xl px-6 py-8">
-        <section className="mb-12">
-          <div className="rounded-3xl bg-gradient-to-br from-teal-100 to-cyan-100 p-8 border-teal-200 border-2 shadow-lg">
-            <div className="flex items-start gap-3 mb-4">
-              <Star className="w-6 h-6 text-teal-700 fill-teal-700 border-[rgba(151,246,229,1)]" />
+      <main className="mx-auto max-w-7xl px-3 sm:px-6 py-4 sm:py-8">
+        <section className="mb-8 sm:mb-12">
+          <div className="rounded-3xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 sm:p-8 border-teal-200 border-2 shadow-lg">
+            <div className="flex items-start gap-2 sm:gap-3 mb-3 sm:mb-4">
+              <Star className="w-5 h-5 sm:w-6 sm:h-6 text-teal-700 fill-teal-700 border-[rgba(151,246,229,1)] flex-shrink-0" />
               <div>
-                <h2 className="font-bold text-gray-900 font-sans text-2xl">Daily Practice</h2>
-                <p className="text-sm text-gray-700 mt-1 font-sans">Practice with 10 random cards from all decks</p>
+                <h2 className="font-bold text-gray-900 font-sans text-xl sm:text-2xl">Daily Practice</h2>
+                <p className="text-xs sm:text-sm text-gray-700 mt-1 font-sans">
+                  Practice with 10 random cards from all decks
+                </p>
               </div>
             </div>
 
             <Link href="/daily-practice">
-              <button className="mt-4 px-6 py-2.5 rounded-full bg-teal-600 text-white text-sm font-medium hover:bg-teal-700 transition-colors font-sans border-[10px] shadow-md border-[rgba(151,246,229,1)]">
+              <button className="mt-3 sm:mt-4 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full bg-teal-600 text-white text-xs sm:text-sm font-medium hover:bg-teal-700 transition-colors font-sans border-[10px] shadow-md border-[rgba(151,246,229,1)]">
                 Start Practice
               </button>
             </Link>
 
-            <div className="mt-6">
+            <div className="mt-4 sm:mt-6">
               <div className="h-2 rounded-full bg-white overflow-hidden">
                 <div className="h-full bg-gray-900 transition-all duration-300" style={{ width: `${percent}%` }} />
               </div>
-              <div className="mt-2 text-sm font-medium text-gray-700 font-sans">Today {percent}%</div>
+              <div className="mt-2 text-xs sm:text-sm font-medium text-gray-700 font-sans">Today {percent}%</div>
             </div>
           </div>
         </section>
 
         <section className="font-sans">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 font-sans">Choose Your Deck</h2>
-            <p className="text-gray-600 mt-1 font-sans">Select a topic to start learning</p>
+          <div className="mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 font-sans">Choose Your Deck</h2>
+            <p className="text-sm sm:text-base text-gray-600 mt-1 font-sans">Select a topic to start learning</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {decks.map((deck) => (
               <DeckCard
                 key={deck.id}
