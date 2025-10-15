@@ -140,13 +140,13 @@ export default function HomePage() {
             <div className="flex items-start gap-3 mb-4">
               <Star className="w-6 h-6 text-teal-700 fill-teal-700" />
               <div>
-                <h2 className="text-xl font-bold text-gray-900">Daily Practice</h2>
-                <p className="text-sm text-gray-700 mt-1">Practice with 10 random cards from all decks</p>
+                <h2 className="text-xl font-bold text-gray-900 font-sans">Daily Practice</h2>
+                <p className="text-sm text-gray-700 mt-1 font-sans">Practice with 10 random cards from all decks</p>
               </div>
             </div>
 
             <Link href="/daily-practice">
-              <button className="mt-4 px-6 py-2.5 rounded-full bg-teal-600 text-white text-sm font-medium hover:bg-teal-700 transition-colors">
+              <button className="mt-4 px-6 py-2.5 rounded-full bg-teal-600 text-white text-sm font-medium hover:bg-teal-700 transition-colors font-sans">
                 Start Practice
               </button>
             </Link>
@@ -155,15 +155,15 @@ export default function HomePage() {
               <div className="h-2 rounded-full bg-white overflow-hidden">
                 <div className="h-full bg-gray-900 transition-all duration-300" style={{ width: `${percent}%` }} />
               </div>
-              <div className="mt-2 text-sm font-medium text-gray-700">Today {percent}%</div>
+              <div className="mt-2 text-sm font-medium text-gray-700 font-sans">Today {percent}%</div>
             </div>
           </div>
         </section>
 
-        <section>
+        <section className="font-sans">
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">Choose Your Deck</h2>
-            <p className="text-gray-600 mt-1">Select a topic to start learning</p>
+            <h2 className="text-2xl font-bold text-gray-900 font-sans">Choose Your Deck</h2>
+            <p className="text-gray-600 mt-1 font-sans">Select a topic to start learning</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

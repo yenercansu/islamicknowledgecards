@@ -17,7 +17,7 @@ export default function SavedPage() {
   }, [])
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-teal-100 to-teal-300 p-6">
+    <main className="min-h-screen bg-gradient-to-br from-teal-100 to-teal-300 p-6 font-sans">
       {/* Back */}
       <div className="mb-6">
         <button

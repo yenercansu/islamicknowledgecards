@@ -133,14 +133,14 @@ export default function GameCard({
           </svg>
         </button>
         {card.section && (
-          <span className="px-3 py-1 rounded-full bg-white/25 text-white text-sm font-semibold backdrop-blur">
+          <span className="px-3 py-1 rounded-full bg-white/25 text-white text-sm font-semibold backdrop-blur font-sans">
             {card.section}
           </span>
         )}
       </div>
 
       <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20">
-        <span className="px-4 py-1 rounded-full bg-white/25 text-white text-sm font-semibold backdrop-blur">
+        <span className="px-4 py-1 rounded-full bg-white/25 text-white text-sm font-semibold backdrop-blur font-sans">
           Question {Math.min(index + 1, total)} of {total || 0}
         </span>
       </div>
@@ -182,7 +182,7 @@ export default function GameCard({
           >
             {/* FRONT — spacious layout */}
             <div
-              className={`absolute inset-0 backface-hidden rounded-3xl border ${isCorrect ? "border-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.5)]" : "border-black/10"} bg-white shadow-xl p-8 md:p-10 text-slate-900`}
+              className={`absolute inset-0 backface-hidden rounded-3xl border font-sans ${isCorrect ? "border-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.5)]" : "border-black/10"} bg-white shadow-xl p-8 md:p-10 text-slate-900`}
               onClick={handleAnyClick}
             >
               <div className="h-full w-full mx-auto max-w-[650px] flex flex-col">
@@ -259,7 +259,7 @@ export default function GameCard({
 
           <button
             onClick={goRandom}
-            className="h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold flex items-center justify-center gap-2"
+            className="h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold flex items-center justify-center gap-2 font-sans"
             aria-label="Randomize"
             title="Randomize question"
           >
@@ -277,7 +277,7 @@ export default function GameCard({
 
           <button
             onClick={goNext}
-            className="h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold"
+            className="h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold font-sans"
           >
             Next
           </button>

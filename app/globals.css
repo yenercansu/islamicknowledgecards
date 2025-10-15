@@ -3,6 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* SF Pro font family configuration */
+@theme inline {
+  /* SF Pro font stack with system fallbacks */
+  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, sans-serif;
+}
+
 /* Updated color scheme to match Figma design with teal/mint palette */
 :root {
   --background: oklch(0.98 0 0); /* #fafafa - Light gray background */
@@ -120,7 +126,8 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* Updated base font to be slightly heavier for better readability */
+    /* Applied SF Pro font family and updated base font weight */
+    font-family: var(--font-sans);
     font-weight: 500;
   }
   /* Added global heading styles to match Figma design */
