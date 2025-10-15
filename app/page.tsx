@@ -1,15 +1,12 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { fetchAllDecks } from "@/lib/google-sheets"
 import { getUserProgress } from "@/lib/storage"
 import type { Deck } from "@/types/flashcard"
 import Link from "next/link"
 import { DeckCard } from "@/components/deck-card"
-import { Search } from "lucide-react"
-import Navigation from "@/components/navigation"
+import { Star } from "lucide-react"
 
 // Icon mapping for decks
 const deckIconMap = {
@@ -124,50 +121,53 @@ export default function HomePage() {
             The Google Sheet needs to be publicly accessible. Please make sure the sheet is shared with "Anyone with the
             link can view".
           </p>
-          <Button onClick={() => window.location.reload()} variant="outline">
+          <button
+            onClick={() => window.location.reload()}
+            className="mt-4 rounded-full bg-white text-teal-600 px-4 py-2 shadow"
+          >
             Try Again
-          </Button>
+          </button>
         </div>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-25 via-emerald-25 to-teal-50">
-      <Navigation />
-
-      <main className="mx-auto max-w-6xl px-4 py-8">
-        <section className="my-6">
-          <div className="rounded-2xl bg-gradient-to-br from-teal-400 via-teal-500 to-teal-600 p-6 text-white shadow-lg">
-            <h2 className="text-lg font-semibold">Daily Practice</h2>
-            <p className="text-sm">Practice with 10 random cards from all decks</p>
-            <Link href="/daily-practice">
-              <button className="mt-4 rounded-full bg-white text-teal-600 px-4 py-2 shadow">Start Practice</button>
-            </Link>
-            <div className="mt-3 h-2 rounded bg-white/50 overflow-hidden">
-              <div className="h-full bg-teal-700" style={{ width: `${percent}%` }} />
+    <div className="min-h-screen bg-gray-50">
+      <main className="mx-auto max-w-7xl px-6 py-8">
+        <section className="mb-12">
+          <div className="rounded-3xl bg-gradient-to-br from-teal-100 to-cyan-100 p-8 border-2 border-teal-200">
+            <div className="flex items-start gap-3 mb-4">
+              <Star className="w-6 h-6 text-teal-700 fill-teal-700" />
+              <div>
+                <h2 className="text-xl font-bold text-gray-900">Daily Practice</h2>
+                <p className="text-sm text-gray-700 mt-1">Practice with 10 random cards from all decks</p>
+              </div>
             </div>
-            <div className="mt-1 text-sm">{percent}% today</div>
+
+            <Link href="/daily-practice">
+              <button className="mt-4 px-6 py-2.5 rounded-full bg-teal-600 text-white text-sm font-medium hover:bg-teal-700 transition-colors">
+                Start Practice
+              </button>
+            </Link>
+
+            <div className="mt-6">
+              <div className="h-2 rounded-full bg-white overflow-hidden">
+                <div className="h-full bg-gray-900 transition-all duration-300" style={{ width: `${percent}%` }} />
+              </div>
+              <div className="mt-2 text-sm font-medium text-gray-700">Today {percent}%</div>
+            </div>
           </div>
         </section>
 
-        <section className="my-6">
-          <h2 className="text-2xl font-bold">Choose Your Deck</h2>
-          <p className="text-gray-600 mb-6">Select a topic to start learning</p>
-
-          <div className="relative max-w-md mb-6">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <Input
-              type="text"
-              placeholder="Search decks..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 bg-white text-gray-900 border rounded-full"
-            />
+        <section>
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">Choose Your Deck</h2>
+            <p className="text-gray-600 mt-1">Select a topic to start learning</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {filteredDecks.map((deck) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {decks.map((deck) => (
               <DeckCard
                 key={deck.id}
                 icon={deckIconMap[deck.name as keyof typeof deckIconMap] || "book"}

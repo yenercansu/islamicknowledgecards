@@ -3,75 +3,76 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Updated color scheme to match Figma design with teal/mint palette */
 :root {
-  --background: oklch(1 0 0); /* #ffffff - Clean white background */
+  --background: oklch(0.98 0 0); /* #fafafa - Light gray background */
   --foreground: oklch(0.205 0 0); /* #1f2937 - Dark gray for primary text */
-  --card: oklch(0.97 0 0); /* #f1f5f9 - Light gray for flashcards */
+  --card: oklch(1 0 0); /* #ffffff - White cards */
   --card-foreground: oklch(0.205 0 0); /* #1f2937 - Dark text on cards */
   --popover: oklch(1 0 0); /* #ffffff - White popover background */
   --popover-foreground: oklch(0.205 0 0); /* #1f2937 - Dark text in popovers */
-  --primary: oklch(0.205 0 0); /* #1f2937 - Primary brand color for headers/buttons */
+  --primary: oklch(0.556 0.15 180); /* Teal primary color */
   --primary-foreground: oklch(1 0 0); /* #ffffff - White text on primary */
   --secondary: oklch(0.556 0 0); /* #6b7280 - Medium gray for secondary actions */
   --secondary-foreground: oklch(1 0 0); /* #ffffff - White text on secondary */
   --muted: oklch(0.97 0 0); /* #f1f5f9 - Light gray for muted elements */
   --muted-foreground: oklch(0.556 0 0); /* #6b7280 - Medium gray text */
-  --accent: oklch(0.646 0.222 264.376); /* #8b5cf6 - Violet accent for highlights */
+  --accent: oklch(0.556 0.15 180); /* Teal accent matching primary */
   --accent-foreground: oklch(1 0 0); /* #ffffff - White text on accent */
   --destructive: oklch(0.577 0.245 27.325); /* #dc2626 - Red for errors */
   --destructive-foreground: oklch(1 0 0); /* #ffffff - White text on destructive */
   --border: oklch(0.922 0 0); /* #e5e7eb - Light gray borders */
   --input: oklch(0.97 0 0); /* #f1f5f9 - Light gray input backgrounds */
-  --ring: oklch(0.646 0.222 264.376); /* #8b5cf6 - Violet focus rings */
-  --chart-1: oklch(0.646 0.222 264.376); /* #8b5cf6 - Primary chart color */
-  --chart-2: oklch(0.577 0.245 27.325); /* #dc2626 - Secondary chart color */
-  --chart-3: oklch(0.627 0.265 41.116); /* #ea580c - Tertiary chart color */
-  --chart-4: oklch(0.205 0 0); /* #1f2937 - Quaternary chart color */
-  --chart-5: oklch(0.769 0.188 70.08); /* #f59e0b - Quinary chart color */
+  --ring: oklch(0.556 0.15 180); /* Teal focus rings */
+  --chart-1: oklch(0.556 0.15 180); /* Teal chart color */
+  --chart-2: oklch(0.577 0.245 27.325); /* Red chart color */
+  --chart-3: oklch(0.627 0.265 41.116); /* Orange chart color */
+  --chart-4: oklch(0.205 0 0); /* Dark gray chart color */
+  --chart-5: oklch(0.769 0.188 70.08); /* Yellow chart color */
   --radius: 0.5rem; /* 8px corner rounding */
-  --sidebar: oklch(1 0 0); /* #ffffff - White sidebar background */
-  --sidebar-foreground: oklch(0.205 0 0); /* #1f2937 - Dark sidebar text */
-  --sidebar-primary: oklch(0.97 0 0); /* #f1f5f9 - Light gray sidebar items */
-  --sidebar-primary-foreground: oklch(0.205 0 0); /* #1f2937 - Dark text on sidebar items */
-  --sidebar-accent: oklch(0.646 0.222 264.376); /* #8b5cf6 - Violet sidebar highlights */
-  --sidebar-accent-foreground: oklch(1 0 0); /* #ffffff - White text on sidebar accents */
-  --sidebar-border: oklch(0.922 0 0); /* #e5e7eb - Light gray sidebar borders */
-  --sidebar-ring: oklch(0.646 0.222 264.376); /* #8b5cf6 - Violet sidebar focus rings */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-  --background: oklch(0.145 0 0); /* Dark background */
-  --foreground: oklch(0.985 0 0); /* Light text */
-  --card: oklch(0.205 0 0); /* Darker cards */
-  --card-foreground: oklch(0.985 0 0); /* Light text on cards */
-  --popover: oklch(0.205 0 0); /* Dark popover background */
-  --popover-foreground: oklch(0.985 0 0); /* Light popover text */
-  --primary: oklch(0.985 0 0); /* Light primary for contrast */
-  --primary-foreground: oklch(0.145 0 0); /* Dark text on light primary */
-  --secondary: oklch(0.269 0 0); /* Darker secondary */
-  --secondary-foreground: oklch(0.985 0 0); /* Light text on secondary */
-  --muted: oklch(0.269 0 0); /* Darker muted background */
-  --muted-foreground: oklch(0.708 0 0); /* Medium light muted text */
-  --accent: oklch(0.646 0.222 264.376); /* Keep violet accent */
-  --accent-foreground: oklch(1 0 0); /* White text on accent */
-  --destructive: oklch(0.577 0.245 27.325); /* Keep red destructive */
-  --destructive-foreground: oklch(1 0 0); /* White text on destructive */
-  --border: oklch(0.269 0 0); /* Dark borders */
-  --input: oklch(0.269 0 0); /* Dark input backgrounds */
-  --ring: oklch(0.646 0.222 264.376); /* Keep violet focus rings */
-  --chart-1: oklch(0.646 0.222 264.376); /* Violet chart color */
-  --chart-2: oklch(0.577 0.245 27.325); /* Red chart color */
-  --chart-3: oklch(0.627 0.265 41.116); /* Orange chart color */
-  --chart-4: oklch(0.985 0 0); /* Light chart color */
-  --chart-5: oklch(0.769 0.188 70.08); /* Yellow chart color */
-  --sidebar: oklch(0.205 0 0); /* Dark sidebar */
-  --sidebar-foreground: oklch(0.985 0 0); /* Light sidebar text */
-  --sidebar-primary: oklch(0.269 0 0); /* Darker sidebar items */
-  --sidebar-primary-foreground: oklch(0.985 0 0); /* Light text on sidebar items */
-  --sidebar-accent: oklch(0.646 0.222 264.376); /* Violet sidebar highlights */
-  --sidebar-accent-foreground: oklch(1 0 0); /* White text on sidebar accents */
-  --sidebar-border: oklch(0.269 0 0); /* Dark sidebar borders */
-  --sidebar-ring: oklch(0.646 0.222 264.376); /* Violet sidebar focus rings */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
 }
 
 @theme inline {
@@ -118,8 +119,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    background: #4fd1c7; /* Updated to uniform teal background matching the flashcard interface */
-    min-height: 100vh;
     @apply bg-background text-foreground;
   }
 }

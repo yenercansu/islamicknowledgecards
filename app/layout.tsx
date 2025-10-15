@@ -3,12 +3,11 @@ import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
-import AuthProvider from "@/components/auth-provider"
-import ThemeProvider from "@/components/theme-provider" // Assuming ThemeProvider is imported from this path
+import Navigation from "@/components/navigation"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
+  title: "Islamic Knowledge Cards",
+  description: "Learn Islamic knowledge through interactive flashcards",
   generator: "v0.app",
 }
 
@@ -28,12 +27,9 @@ html {
 }
         `}</style>
       </head>
-      <body>
-        <AuthProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-            {children}
-          </ThemeProvider>
-        </AuthProvider>
+      <body className="bg-gray-50">
+        <Navigation />
+        {children}
       </body>
     </html>
   )
