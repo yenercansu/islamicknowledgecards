@@ -38,7 +38,7 @@ const Navigation = () => {
     <>
       <header className="w-full bg-white border-b border-gray-200">
         <div className="mx-auto max-w-7xl px-3 sm:px-6 py-3 sm:py-0 sm:h-20 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0 font-sans">
-          <Link href="/" className="hidden sm:block font-bold text-gray-900 text-xl font-sans">
+          <Link href="/" className="font-bold text-gray-900 text-sm sm:text-xl font-sans">
             Islamic Knowledge Cards
           </Link>
 
@@ -84,12 +84,12 @@ const Navigation = () => {
               </>
             ) : (
               <>
-                {/* Not signed in: Show SIGN IN button only */}
                 <Link
                   href="/login"
-                  className="px-4 sm:px-6 py-2.5 rounded-full bg-teal-600 text-white text-xs sm:text-sm font-semibold hover:bg-teal-700 transition-colors uppercase tracking-wide font-sans"
+                  className="p-2.5 sm:px-6 sm:py-2.5 rounded-full bg-teal-600 text-white hover:bg-teal-700 transition-colors font-sans flex items-center justify-center"
                 >
-                  SIGN IN
+                  <User className="w-5 h-5 sm:hidden" />
+                  <span className="hidden sm:inline text-sm font-semibold uppercase tracking-wide">SIGN IN</span>
                 </Link>
               </>
             )}
