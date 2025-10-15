@@ -182,6 +182,172 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
+        <section className="font-sans mt-12 sm:mt-16">
+          <div className="mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 font-sans">Choose Your Quiz</h2>
+            <p className="text-sm sm:text-base text-gray-600 mt-1 font-sans">
+              Discover more about your beliefs, your mindset, and your understanding of Islam.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {/* Quiz 1: Which Sahabi Would Be Your Best Friend? */}
+            <Link href="/quiz/sahabi-friend">
+              <div className="rounded-3xl bg-white p-6 border-2 border-teal-200 shadow-lg hover:shadow-xl transition-shadow flex flex-col cursor-pointer">
+                <div className="rounded-2xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 mb-4">
+                  <h3 className="text-lg font-bold text-gray-900">Which Sahabi Would Be Your Best Friend?</h3>
+                </div>
+                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                  Discover which Companion of the Prophet ﷺ reflects your character traits and values most closely.
+                </p>
+                <button className="w-full px-6 py-2.5 rounded-full bg-gray-100 text-gray-900 text-sm font-medium hover:bg-gray-200 transition-colors mt-auto">
+                  Take the Quiz
+                </button>
+              </div>
+            </Link>
+
+            {/* Quiz 2: Which Madhhab Fits You Best */}
+            <Link href="/quiz/madhhab-fit">
+              <div className="rounded-3xl bg-white p-6 border-2 border-teal-200 shadow-lg hover:shadow-xl transition-shadow flex flex-col cursor-pointer">
+                <div className="rounded-2xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 mb-4">
+                  <h3 className="text-lg font-bold text-gray-900">Which Madhhab Fits You Best</h3>
+                </div>
+                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                  Explore which school of Islamic law your approach to worship and daily life is closest to.
+                </p>
+                <button className="w-full px-6 py-2.5 rounded-full bg-gray-100 text-gray-900 text-sm font-medium hover:bg-gray-200 transition-colors mt-auto">
+                  Take the Quiz
+                </button>
+              </div>
+            </Link>
+
+            {/* Quiz 3: Which Scholar Are You Closest To */}
+            <Link href="/quiz/scholar-closest">
+              <div className="rounded-3xl bg-white p-6 border-2 border-teal-200 shadow-lg hover:shadow-xl transition-shadow flex flex-col cursor-pointer">
+                <div className="rounded-2xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 mb-4">
+                  <h3 className="text-lg font-bold text-gray-900">Which Scholar Are You Closest To</h3>
+                </div>
+                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                  Find the great Muslim thinker or scholar whose outlook and philosophy most resemble your own.
+                </p>
+                <button className="w-full px-6 py-2.5 rounded-full bg-gray-100 text-gray-900 text-sm font-medium hover:bg-gray-200 transition-colors mt-auto">
+                  Take the Quiz
+                </button>
+              </div>
+            </Link>
+
+            {/* Quiz 4: Community Role: Scholar, Mystic, or Activist? */}
+            <Link href="/quiz/community-role">
+              <div className="rounded-3xl bg-white p-6 border-2 border-teal-200 shadow-lg hover:shadow-xl transition-shadow flex flex-col cursor-pointer">
+                <div className="rounded-2xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 mb-4">
+                  <h3 className="text-lg font-bold text-gray-900">Community Role: Scholar, Mystic, or Activist?</h3>
+                </div>
+                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                  See what role you would naturally play in the Muslim community: teacher, spiritual guide, or reformer.
+                </p>
+                <button className="w-full px-6 py-2.5 rounded-full bg-gray-100 text-gray-900 text-sm font-medium hover:bg-gray-200 transition-colors mt-auto">
+                  Take the Quiz
+                </button>
+              </div>
+            </Link>
+
+            {/* Quiz 5: Reason vs Revelation Balance */}
+            <Link href="/quiz/reason-revelation">
+              <div className="rounded-3xl bg-white p-6 border-2 border-teal-200 shadow-lg hover:shadow-xl transition-shadow flex flex-col cursor-pointer">
+                <div className="rounded-2xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 mb-4">
+                  <h3 className="text-lg font-bold text-gray-900">Reason vs Revelation Balance</h3>
+                </div>
+                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                  Measure how you navigate between rational thinking and revealed guidance in matters of faith and
+                  practice.
+                </p>
+                <button className="w-full px-6 py-2.5 rounded-full bg-gray-100 text-gray-900 text-sm font-medium hover:bg-gray-200 transition-colors mt-auto">
+                  Take the Quiz
+                </button>
+              </div>
+            </Link>
+
+            {/* Quiz 6: Which Islamic Period Should You Live In */}
+            <Link href="/quiz/islamic-period">
+              <div className="rounded-3xl bg-white p-6 border-2 border-teal-200 shadow-lg hover:shadow-xl transition-shadow flex flex-col cursor-pointer">
+                <div className="rounded-2xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 mb-4">
+                  <h3 className="text-lg font-bold text-gray-900">Which Islamic Period Should You Live In</h3>
+                </div>
+                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                  Uncover which era of Islamic history, Rashidun, Abbasid, Ottoman, or modern times, best suits your
+                  worldview.
+                </p>
+                <button className="w-full px-6 py-2.5 rounded-full bg-gray-100 text-gray-900 text-sm font-medium hover:bg-gray-200 transition-colors mt-auto">
+                  Take the Quiz
+                </button>
+              </div>
+            </Link>
+
+            {/* Quiz 7: Authority Preference: Texts or Scholars? */}
+            <Link href="/quiz/authority-preference">
+              <div className="rounded-3xl bg-white p-6 border-2 border-teal-200 shadow-lg hover:shadow-xl transition-shadow flex flex-col cursor-pointer">
+                <div className="rounded-2xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 mb-4">
+                  <h3 className="text-lg font-bold text-gray-900">Authority Preference: Texts or Scholars?</h3>
+                </div>
+                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                  Find out whether you rely most on scripture, juristic tradition, or spiritual figures when seeking
+                  guidance.
+                </p>
+                <button className="w-full px-6 py-2.5 rounded-full bg-gray-100 text-gray-900 text-sm font-medium hover:bg-gray-200 transition-colors mt-auto">
+                  Take the Quiz
+                </button>
+              </div>
+            </Link>
+
+            {/* Quiz 8: Will You Find Sakinah in Marriage? */}
+            <Link href="/quiz/sakinah-marriage">
+              <div className="rounded-3xl bg-white p-6 border-2 border-teal-200 shadow-lg hover:shadow-xl transition-shadow flex flex-col cursor-pointer">
+                <div className="rounded-2xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 mb-4">
+                  <h3 className="text-lg font-bold text-gray-900">Will You Find Sakinah in Marriage?</h3>
+                </div>
+                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                  Explore which qualities of love, mercy, and balance in marriage align with your personality and
+                  expectations.
+                </p>
+                <button className="w-full px-6 py-2.5 rounded-full bg-gray-100 text-gray-900 text-sm font-medium hover:bg-gray-200 transition-colors mt-auto">
+                  Take the Quiz
+                </button>
+              </div>
+            </Link>
+
+            {/* Quiz 9: Ashari vs Maturidi vs Athari */}
+            <Link href="/quiz/ashari-maturidi-athari">
+              <div className="rounded-3xl bg-white p-6 border-2 border-teal-200 shadow-lg hover:shadow-xl transition-shadow flex flex-col cursor-pointer">
+                <div className="rounded-2xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 mb-4">
+                  <h3 className="text-lg font-bold text-gray-900">Ashari vs Maturidi vs Athari</h3>
+                </div>
+                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                  Test your theological orientation and discover which Sunni creed school your beliefs align with most.
+                </p>
+                <button className="w-full px-6 py-2.5 rounded-full bg-gray-100 text-gray-900 text-sm font-medium hover:bg-gray-200 transition-colors mt-auto">
+                  Take the Quiz
+                </button>
+              </div>
+            </Link>
+
+            <Link href="/quiz/madhhab-prayer">
+              <div className="rounded-3xl bg-white p-6 border-2 border-teal-200 shadow-lg hover:shadow-xl transition-shadow flex flex-col cursor-pointer">
+                <div className="rounded-2xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 mb-4">
+                  <h3 className="text-lg font-bold text-gray-900">
+                    According to Which Madhhab Are You Praying Correctly?
+                  </h3>
+                </div>
+                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                  Discover which school of Islamic jurisprudence your prayer practices align with most closely.
+                </p>
+                <button className="w-full px-6 py-2.5 rounded-full bg-gray-100 text-gray-900 text-sm font-medium hover:bg-gray-200 transition-colors mt-auto">
+                  Take the Quiz
+                </button>
+              </div>
+            </Link>
+          </div>
+        </section>
       </main>
 
       <footer className="bg-white border-t border-gray-200 mt-12">

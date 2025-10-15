@@ -1,0 +1,233 @@
+{
+  "id": "madhhab-prayer",
+  "title": "According to Which Madhhab Are You Praying Correctly?",
+  "description": "Discover which school of Islamic jurisprudence your prayer practices align with most closely.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "At which level do you raise your hands in Ihram?",
+      "options": [
+        {
+          "id": "1.1",
+          "text": "Raising until the thumbs touch the ears from below",
+          "scores": { "hanafi": 1, "maliki": 0, "shafii": 1, "hanbali": 0 }
+        },
+        {
+          "id": "1.2",
+          "text": "The level of the chest",
+          "scores": { "hanafi": 0, "maliki": 1, "shafii": 0, "hanbali": 0 }
+        },
+        {
+          "id": "1.3",
+          "text": "The level of the upper chest and the neck",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 0, "hanbali": 1 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "After Ihram, how do you place your hands while standing?",
+      "options": [
+        {
+          "id": "2.1",
+          "text": "Crossed below the navel",
+          "scores": { "hanafi": 1, "maliki": 0, "shafii": 0, "hanbali": 1 }
+        },
+        {
+          "id": "2.2",
+          "text": "Relaxed next to the body",
+          "scores": { "hanafi": 0, "maliki": 1, "shafii": 0, "hanbali": 0 }
+        },
+        {
+          "id": "2.3",
+          "text": "Crossed above the navel",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 1, "hanbali": 0 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Which opening dua do you read before Fatiha?",
+      "options": [
+        {
+          "id": "3.1",
+          "text": "\"Subhanak Allahuma ... we-beh'amdik\"",
+          "scores": { "hanafi": 1, "maliki": 0, "shafii": 0, "hanbali": 1 }
+        },
+        {
+          "id": "3.2",
+          "text": "\"Wejjehtu wejhi\"",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 1, "hanbali": 0 }
+        },
+        {
+          "id": "3.3",
+          "text": "I read Fatiha directly without an opening dua",
+          "scores": { "hanafi": 0, "maliki": 1, "shafii": 0, "hanbali": 0 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "How do you read Bismillah before Fatiha in a loud prayer?",
+      "options": [
+        {
+          "id": "4.1",
+          "text": "Aloud",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 1, "hanbali": 0 }
+        },
+        {
+          "id": "4.2",
+          "text": "Silently",
+          "scores": { "hanafi": 1, "maliki": 1, "shafii": 0, "hanbali": 1 }
+        },
+        {
+          "id": "4.3",
+          "text": "I do not read it",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 0, "hanbali": 0 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "How do you say Ameen after Fatiha as a follower?",
+      "options": [
+        {
+          "id": "5.1",
+          "text": "Aloud",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 1, "hanbali": 1 }
+        },
+        {
+          "id": "5.2",
+          "text": "Silently",
+          "scores": { "hanafi": 1, "maliki": 1, "shafii": 0, "hanbali": 0 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Your everyday practice for Qunut is:",
+      "options": [
+        {
+          "id": "6.1",
+          "text": "Witr before bowing",
+          "scores": { "hanafi": 1, "maliki": 0, "shafii": 0, "hanbali": 0 }
+        },
+        {
+          "id": "6.2",
+          "text": "Fajr, before going to the second bow",
+          "scores": { "hanafi": 0, "maliki": 1, "shafii": 0, "hanbali": 0 }
+        },
+        {
+          "id": "6.3",
+          "text": "Fajr, after raising from the second bow",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 1, "hanbali": 0 }
+        },
+        {
+          "id": "6.4",
+          "text": "Preferred in Witr, after raising from bowing",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 0, "hanbali": 1 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "In a silent prayer, should the follower read Fatiha?",
+      "options": [
+        {
+          "id": "7.1",
+          "text": "Never",
+          "scores": { "hanafi": 1, "maliki": 0, "shafii": 0, "hanbali": 0 }
+        },
+        {
+          "id": "7.2",
+          "text": "Not obligated",
+          "scores": { "hanafi": 0, "maliki": 1, "shafii": 0, "hanbali": 1 }
+        },
+        {
+          "id": "7.3",
+          "text": "Obligated",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 1, "hanbali": 0 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "In a loud prayer, should the follower read Fatiha?",
+      "options": [
+        {
+          "id": "8.1",
+          "text": "Never",
+          "scores": { "hanafi": 1, "maliki": 0, "shafii": 0, "hanbali": 0 }
+        },
+        {
+          "id": "8.2",
+          "text": "Not obligated",
+          "scores": { "hanafi": 0, "maliki": 1, "shafii": 0, "hanbali": 1 }
+        },
+        {
+          "id": "8.3",
+          "text": "Obligated",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 1, "hanbali": 0 }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "How many times do you raise your hands during the prayer, including Ihram?",
+      "options": [
+        {
+          "id": "9.1",
+          "text": "1",
+          "scores": { "hanafi": 1, "maliki": 1, "shafii": 0, "hanbali": 0 }
+        },
+        {
+          "id": "9.2",
+          "text": "3",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 0, "hanbali": 1 }
+        },
+        {
+          "id": "9.3",
+          "text": "4",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 1, "hanbali": 0 }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Which part touches the ground first when going from standing to prostration?",
+      "options": [
+        {
+          "id": "10.1",
+          "text": "Knees first",
+          "scores": { "hanafi": 1, "maliki": 0, "shafii": 1, "hanbali": 1 }
+        },
+        {
+          "id": "10.2",
+          "text": "Hands first",
+          "scores": { "hanafi": 0, "maliki": 1, "shafii": 0, "hanbali": 0 }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "How do you sit in the prayer?",
+      "options": [
+        {
+          "id": "11.1",
+          "text": "Always Iftirash",
+          "scores": { "hanafi": 1, "maliki": 0, "shafii": 0, "hanbali": 0 }
+        },
+        {
+          "id": "11.2",
+          "text": "Always Tawarruk",
+          "scores": { "hanafi": 0, "maliki": 1, "shafii": 0, "hanbali": 0 }
+        },
+        {
+          "id": "11.3",
+          "text": "Iftirash in every sitting except the last sitting where I do Tawarruk",
+          "scores": { "hanafi": 0, "maliki": 0, "shafii": 1, "hanbali": 1 }
+        }
+      ]
+    }
+  ]
+}
