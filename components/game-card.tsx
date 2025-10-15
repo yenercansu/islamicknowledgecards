@@ -170,10 +170,10 @@ export default function GameCard({
           .backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
         `}</style>
 
-        <div className="perspective w-full max-w-[920px]">
+        <div className="perspective w-full max-w-[720px]">
           <div
             className="relative preserve-3d rounded-3xl transition-transform duration-300 mx-auto"
-            style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", height: "min(70vh, 78dvh)" }}
+            style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", height: "min(55vh, 60dvh)" }}
             onClick={() => {
               if (flipped) {
                 setFlipped(false) // only allow click-to-flip if it's already the back
@@ -182,44 +182,44 @@ export default function GameCard({
           >
             {/* FRONT — spacious layout */}
             <div
-              className={`absolute inset-0 backface-hidden rounded-3xl border ${isCorrect ? "border-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.5)]" : "border-black/10"} bg-white shadow-xl p-12 md:p-14 text-slate-900`}
+              className={`absolute inset-0 backface-hidden rounded-3xl border ${isCorrect ? "border-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.5)]" : "border-black/10"} bg-white shadow-xl p-8 md:p-10 text-slate-900`}
               onClick={handleAnyClick}
             >
-              <div className="h-full w-full mx-auto max-w-[1000px] flex flex-col">
+              <div className="h-full w-full mx-auto max-w-[650px] flex flex-col">
                 {/* Question */}
                 <div className="flex-1 flex items-center justify-center">
-                  <h1 className="text-center font-extrabold text-3xl md:text-4xl lg:text-5xl leading-[1.25] md:leading-[1.2] tracking-tight">
+                  <h1 className="text-center font-extrabold text-2xl md:text-3xl lg:text-4xl leading-[1.25] md:leading-[1.2] tracking-tight">
                     {card.question}
                   </h1>
                 </div>
 
                 {/* Divider */}
-                <div className="mx-auto mt-4 mb-8 h-1 w-[72%] bg-teal-600 rounded-full" />
+                <div className="mx-auto mt-3 mb-6 h-1 w-[60%] bg-teal-600 rounded-full" />
 
                 {/* Answers row */}
-                <div className="mb-2 grid grid-cols-[1fr_auto_1fr] items-center gap-8 md:gap-12 max-w-[900px] mx-auto">
+                <div className="mb-2 grid grid-cols-[1fr_auto_1fr] items-center gap-6 md:gap-8 max-w-[650px] mx-auto">
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
                       choose("A")
                     }}
-                    className={`py-5 border-2 ${
+                    className={`py-4 border-2 ${
                       selected === "A" ? "bg-green-50 border-green-200" : "bg-white hover:bg-teal-50"
-                    } text-black font-semibold text-lg md:text-xl border-transparent rounded-3xl w-[110%] px-[30px]`}
+                    } text-black font-semibold text-base md:text-lg border-transparent rounded-3xl w-full px-6`}
                   >
                     {card.answerA}
                   </button>
 
-                  <span className="text-teal-700 font-semibold select-none text-lg md:text-xl">or</span>
+                  <span className="text-teal-700 font-semibold select-none text-base md:text-lg">or</span>
 
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
                       choose("B")
                     }}
-                    className={`py-5 border-2 ${
+                    className={`py-4 border-2 ${
                       selected === "B" ? "bg-green-50 border-green-200" : "bg-white hover:bg-teal-50"
-                    } text-black font-semibold text-lg md:text-xl border-transparent rounded-3xl w-[110%] px-[30px]`}
+                    } text-black font-semibold text-base md:text-lg border-transparent rounded-3xl w-full px-6`}
                   >
                     {card.answerB}
                   </button>
@@ -229,18 +229,18 @@ export default function GameCard({
 
             {/* BACK */}
             <div
-              className={`absolute inset-0 backface-hidden rounded-3xl border ${isCorrect ? "border-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.5)]" : "border-black/10"} bg-white shadow-xl p-10 text-slate-900`}
+              className={`absolute inset-0 backface-hidden rounded-3xl border ${isCorrect ? "border-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.5)]" : "border-black/10"} bg-white shadow-xl p-8 text-slate-900`}
               style={{ transform: "rotateY(180deg)" }}
             >
-              <div className="h-full grid grid-cols-1 md:grid-cols-[1fr_3px_1fr] gap-8 items-center text-center">
-                <div className="p-6">
-                  <div className="text-base font-bold mb-2">Answer A</div>
-                  <div className="text-lg leading-relaxed">{card.explanationA}</div>
+              <div className="h-full grid grid-cols-1 md:grid-cols-[1fr_3px_1fr] gap-6 items-center text-center">
+                <div className="p-4">
+                  <div className="text-sm font-bold mb-2">Answer A</div>
+                  <div className="text-base leading-relaxed">{card.explanationA}</div>
                 </div>
                 <div className="hidden md:block h-full w-[3px] bg-teal-600 rounded-full" />
-                <div className="p-6">
-                  <div className="text-base font-bold mb-2">Answer B</div>
-                  <div className="text-lg leading-relaxed">{card.explanationB}</div>
+                <div className="p-4">
+                  <div className="text-sm font-bold mb-2">Answer B</div>
+                  <div className="text-base leading-relaxed">{card.explanationB}</div>
                 </div>
               </div>
             </div>
@@ -249,7 +249,7 @@ export default function GameCard({
       </div>
 
       <div className="fixed bottom-4 left-0 right-0 px-4">
-        <div className="grid grid-cols-3 gap-3 max-w-[920px] mx-auto">
+        <div className="grid grid-cols-3 gap-3 max-w-[720px] mx-auto">
           <button
             onClick={goPrev}
             className="h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold"

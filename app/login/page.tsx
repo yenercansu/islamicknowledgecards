@@ -1,21 +1,11 @@
 "use client"
 
-import { useEffect, useMemo, useState } from "react"
+import { useMemo, useState } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
-import { signIn, useSession } from "next-auth/react"
 import Link from "next/link"
 import { ChevronLeft } from "lucide-react"
 
 type Mode = "landing" | "signin" | "signup"
-
-function LoginSessionRedirect({ callbackUrl }: { callbackUrl: string }) {
-  const { status } = useSession()
-  const router = useRouter()
-  useEffect(() => {
-    if (status === "authenticated") router.replace(callbackUrl)
-  }, [status, router, callbackUrl])
-  return null
-}
 
 export default function LoginPage() {
   const router = useRouter()
@@ -70,8 +60,6 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white relative">
-      {!authDisabled && <LoginSessionRedirect callbackUrl={callbackUrl} />}
-
       <div className="absolute left-4 top-4 z-10">
         <button
           onClick={() => router.back()}
@@ -90,30 +78,22 @@ export default function LoginPage() {
           {mode === "landing" && (
             <div className="space-y-3">
               <button
-                onClick={() => signIn?.("google", { callbackUrl })}
+                onClick={() => router.push("/signin")}
                 disabled={authDisabled}
                 className={`w-full rounded-xl border px-4 py-3 font-medium ${
                   authDisabled ? "bg-gray-100 text-gray-400 cursor-not-allowed" : "hover:bg-gray-50"
                 } flex items-center justify-center gap-2`}
-                title={authDisabled ? "Temporarily disabled" : "Sign in with Google"}
-              >
-                <GoogleIcon />
-                <span>Sign in with Google</span>
-              </button>
-
-              <button
-                onClick={() => setMode("signin")}
-                className="w-full rounded-xl border px-4 py-3 font-medium hover:bg-gray-50"
+                title={authDisabled ? "Temporarily disabled" : "Sign in"}
               >
                 Sign in
               </button>
 
-              <div className="text-center text-sm text-gray-600 pt-2">
-                Not a user yet?{" "}
-                <button className="text-teal-700 hover:underline" onClick={() => setMode("signup")}>
-                  Sign up
-                </button>
-              </div>
+              <button
+                onClick={() => router.push("/signup")}
+                className="w-full rounded-xl border px-4 py-3 font-medium hover:bg-gray-50"
+              >
+                Sign up
+              </button>
             </div>
           )}
 
@@ -282,7 +262,7 @@ function GoogleIcon() {
       />
       <path
         fill="#FF3D00"
-        d="M6.3 14.7l6.6 4.8C14.8 16 19 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 16.5 4 9.9 8.3 6.3 14.7z"
+        d="M6.3 14.7l6.6 4.8C14.8 16 19 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 35.3 26.9 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.6 5.1C9.8 39.6 16.4 44 24 44z"
       />
       <path
         fill="#4CAF50"

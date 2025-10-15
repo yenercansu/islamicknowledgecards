@@ -120,6 +120,21 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Updated base font to be slightly heavier for better readability */
+    font-weight: 500;
+  }
+  /* Added global heading styles to match Figma design */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+  /* Updated button base styles */
+  button {
+    @apply font-semibold;
   }
 }
 
