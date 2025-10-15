@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
@@ -13,6 +13,15 @@ type Scores = {
   Ahmad: number
   Ghazali: number
   IbnTaymiyyah: number
+}
+
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
 }
 
 export default function ScholarQuizPage() {
@@ -28,16 +37,25 @@ export default function ScholarQuizPage() {
     IbnTaymiyyah: 0,
   })
   const [showResults, setShowResults] = useState(false)
+  const [shuffledQuestions, setShuffledQuestions] = useState<typeof quizData.questions>([])
 
-  const question = quizData.questions[currentQuestion]
-  const progress = ((currentQuestion + 1) / quizData.questions.length) * 100
+  useEffect(() => {
+    const questionsWithShuffledOptions = quizData.questions.map((q) => ({
+      ...q,
+      options: shuffleArray(q.options),
+    }))
+    setShuffledQuestions(questionsWithShuffledOptions)
+  }, [])
+
+  const question = shuffledQuestions[currentQuestion]
+  const progress = ((currentQuestion + 1) / shuffledQuestions.length) * 100
 
   const handleSelectAnswer = (optionId: string) => {
     setSelectedAnswers({ ...selectedAnswers, [currentQuestion]: optionId })
   }
 
   const handleNext = () => {
-    if (currentQuestion < quizData.questions.length - 1) {
+    if (currentQuestion < shuffledQuestions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
     }
   }
@@ -58,7 +76,7 @@ export default function ScholarQuizPage() {
       IbnTaymiyyah: 0,
     }
 
-    quizData.questions.forEach((q, index) => {
+    shuffledQuestions.forEach((q, index) => {
       const selectedOptionId = selectedAnswers[index]
       if (selectedOptionId) {
         const option = q.options.find((opt) => opt.id === selectedOptionId)
@@ -89,6 +107,19 @@ export default function ScholarQuizPage() {
       IbnTaymiyyah: 0,
     })
     setShowResults(false)
+    const questionsWithShuffledOptions = quizData.questions.map((q) => ({
+      ...q,
+      options: shuffleArray(q.options),
+    }))
+    setShuffledQuestions(questionsWithShuffledOptions)
+  }
+
+  if (shuffledQuestions.length === 0) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+        <div className="text-white text-lg">Loading quiz...</div>
+      </div>
+    )
   }
 
   if (showResults) {
@@ -158,7 +189,7 @@ export default function ScholarQuizPage() {
     )
   }
 
-  const isLastQuestion = currentQuestion === quizData.questions.length - 1
+  const isLastQuestion = currentQuestion === shuffledQuestions.length - 1
   const hasSelectedAnswer = selectedAnswers[currentQuestion] !== undefined
 
   return (
@@ -175,7 +206,7 @@ export default function ScholarQuizPage() {
 
       <div className="absolute top-2 sm:top-4 left-1/2 -translate-x-1/2 z-20">
         <span className="px-3 sm:px-4 py-1 rounded-full bg-white/25 text-white text-xs sm:text-sm font-semibold backdrop-blur font-sans">
-          Question {currentQuestion + 1} of {quizData.questions.length}
+          Question {currentQuestion + 1} of {shuffledQuestions.length}
         </span>
       </div>
 

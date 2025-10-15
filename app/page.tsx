@@ -200,7 +200,7 @@ export default function HomePage() {
                     According to Which Madhhab Are You Praying Correctly?
                   </h3>
                 </div>
-                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                <p className="text-sm text-gray-700 mb-6 flex-grow font-medium">
                   Discover which school of Islamic jurisprudence your prayer practices align with most closely.
                 </p>
                 <button className="w-full px-6 py-2.5 rounded-full bg-teal-600 text-white text-sm font-medium hover:bg-teal-700 transition-colors mt-auto shadow-md border-[10px] border-[rgba(151,246,229,1)]">
@@ -215,7 +215,7 @@ export default function HomePage() {
                 <div className="rounded-2xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 mb-4">
                   <h3 className="text-lg font-bold text-gray-900">Which Sahabi Would Be Your Best Friend?</h3>
                 </div>
-                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                <p className="text-sm text-gray-700 mb-6 flex-grow font-medium">
                   Discover which Companion of the Prophet ﷺ reflects your character traits and values most closely.
                 </p>
                 <button className="w-full px-6 py-2.5 rounded-full bg-teal-600 text-white text-sm font-medium hover:bg-teal-700 transition-colors mt-auto shadow-md border-[10px] border-[rgba(151,246,229,1)]">
@@ -230,7 +230,7 @@ export default function HomePage() {
                 <div className="rounded-2xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 mb-4">
                   <h3 className="text-lg font-bold text-gray-900">Which Scholar Are You Closest To</h3>
                 </div>
-                <p className="text-sm text-gray-700 mb-6 flex-grow">
+                <p className="text-sm text-gray-700 mb-6 flex-grow font-medium">
                   Find the great Muslim thinker or scholar whose outlook and philosophy most resemble your own.
                 </p>
                 <button className="w-full px-6 py-2.5 rounded-full bg-teal-600 text-white text-sm font-medium hover:bg-teal-700 transition-colors mt-auto shadow-md border-[10px] border-[rgba(151,246,229,1)]">

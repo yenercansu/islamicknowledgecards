@@ -1,12 +1,21 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import quizData from "@/data/quizzes/madhhab-fit.json"
 
 type Scores = {
   [key: string]: number
+}
+
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
 }
 
 export default function MadhhabFitQuiz() {
@@ -19,6 +28,15 @@ export default function MadhhabFitQuiz() {
     Hanbali: 0,
   })
   const [showResults, setShowResults] = useState(false)
+  const [shuffledQuestions, setShuffledQuestions] = useState(quizData.questions)
+
+  useEffect(() => {
+    const questionsWithShuffledOptions = quizData.questions.map((question) => ({
+      ...question,
+      options: shuffleArray(question.options),
+    }))
+    setShuffledQuestions(questionsWithShuffledOptions)
+  }, [])
 
   const handleOptionSelect = (optionId: string) => {
     setSelectedOptions([optionId])
@@ -27,7 +45,7 @@ export default function MadhhabFitQuiz() {
   const handleNext = () => {
     if (selectedOptions.length === 0) return
 
-    const currentQ = quizData.questions[currentQuestion]
+    const currentQ = shuffledQuestions[currentQuestion]
     const newScores = { ...scores }
 
     selectedOptions.forEach((optionId) => {
@@ -41,7 +59,7 @@ export default function MadhhabFitQuiz() {
 
     setScores(newScores)
 
-    if (currentQuestion < quizData.questions.length - 1) {
+    if (currentQuestion < shuffledQuestions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
       setSelectedOptions([])
     } else {
@@ -66,6 +84,11 @@ export default function MadhhabFitQuiz() {
       Hanbali: 0,
     })
     setShowResults(false)
+    const questionsWithShuffledOptions = quizData.questions.map((question) => ({
+      ...question,
+      options: shuffleArray(question.options),
+    }))
+    setShuffledQuestions(questionsWithShuffledOptions)
   }
 
   if (showResults) {
@@ -127,8 +150,8 @@ export default function MadhhabFitQuiz() {
     )
   }
 
-  const question = quizData.questions[currentQuestion]
-  const progress = ((currentQuestion + 1) / quizData.questions.length) * 100
+  const question = shuffledQuestions[currentQuestion]
+  const progress = ((currentQuestion + 1) / shuffledQuestions.length) * 100
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-400 to-teal-600 p-4 sm:p-6">
@@ -144,7 +167,7 @@ export default function MadhhabFitQuiz() {
         {/* Question Counter */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2">
           <div className="px-6 py-2 rounded-full bg-white/25 text-white backdrop-blur font-medium">
-            Question {currentQuestion + 1} of {quizData.questions.length}
+            Question {currentQuestion + 1} of {shuffledQuestions.length}
           </div>
         </div>
 
@@ -194,7 +217,7 @@ export default function MadhhabFitQuiz() {
               disabled={selectedOptions.length === 0}
               className="px-6 py-3 rounded-2xl bg-teal-600 hover:bg-teal-700 text-white border-2 border-teal-700 font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {currentQuestion === quizData.questions.length - 1 ? "Submit" : "Next"}
+              {currentQuestion === shuffledQuestions.length - 1 ? "Submit" : "Next"}
             </button>
           </div>
         </div>
