@@ -1,0 +1,392 @@
+{
+  "title": "Which Madhhab Fits You Best",
+  "description": "Explore which school of Islamic law your approach to worship and daily life is closest to.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "When two hadith appear to differ, what is the best approach?",
+      "options": [
+        {
+          "id": "1.1",
+          "text": "Analyze both, then prefer the one supported by qiyas and companions' opinion",
+          "scores": {
+            "Hanafi": 1,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "1.2",
+          "text": "Prefer the hadith that aligns with practice of Medina",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 1,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "1.3",
+          "text": "Reconcile them using usul and give preference to stronger isnad",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 1,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "1.4",
+          "text": "Take the apparent (zahir) meaning of the stronger hadith",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "When a legal issue has no direct hadith or Quranic text, how should it be addressed?",
+      "options": [
+        {
+          "id": "2.1",
+          "text": "Derive through qiyas based on similar cases",
+          "scores": {
+            "Hanafi": 1,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "2.2",
+          "text": "Consider maslahah and local custom",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 1,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "2.3",
+          "text": "Suspend judgment until textual proof appears",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 1,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "2.4",
+          "text": "Follow the principle of caution (ihtiyat) and the statements of early scholars",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "How should weak hadith be used in legal rulings?",
+      "options": [
+        {
+          "id": "3.1",
+          "text": "Can be accepted if supported by qiyas or general principles",
+          "scores": {
+            "Hanafi": 1,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "3.2",
+          "text": "Can be used if in harmony with Amal Ahl al-Madina",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 1,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "3.3",
+          "text": "Should be avoided when stronger hadith exist",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 1,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "3.4",
+          "text": "Should be used if it has no contradiction and fits the text literally",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Which best describes your view on qiyas (analogical reasoning)?",
+      "options": [
+        {
+          "id": "4.1",
+          "text": "Essential tool to ensure consistency and logic in rulings",
+          "scores": {
+            "Hanafi": 1,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "4.2",
+          "text": "Acceptable but secondary to practice and maslahah",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 1,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "4.3",
+          "text": "Used with strict conditions only when no text exists",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 1,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "4.4",
+          "text": "Used rarely and with caution, preferring direct texts",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "How do you treat the practice ('amal) of the people of Medina as a source?",
+      "options": [
+        {
+          "id": "5.1",
+          "text": "Respected but not binding",
+          "scores": {
+            "Hanafi": 1,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "5.2",
+          "text": "Primary proof after Quran and Sunnah",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 1,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "5.3",
+          "text": "Only accepted if confirmed by hadith",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 1,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "5.4",
+          "text": "Not considered an independent proof",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "When facing two valid scholarly opinions, how should one choose?",
+      "options": [
+        {
+          "id": "6.1",
+          "text": "By evaluating which aligns better with qiyas and logic",
+          "scores": {
+            "Hanafi": 1,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "6.2",
+          "text": "By observing what scholars of Medina practiced",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 1,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "6.3",
+          "text": "By following the one backed by stronger hadith",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 1,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "6.4",
+          "text": "By adhering to the earlier generation's (Salaf) view",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "How should custom ('urf) influence rulings?",
+      "options": [
+        {
+          "id": "7.1",
+          "text": "Can define rulings when texts are silent",
+          "scores": {
+            "Hanafi": 1,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "7.2",
+          "text": "Has strong influence especially in public matters",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 1,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "7.3",
+          "text": "Accepted only if consistent with textual evidence",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 1,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "7.4",
+          "text": "Has minimal effect unless directly mentioned in text",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "In deriving new rulings (ijtihad), what is the key principle?",
+      "options": [
+        {
+          "id": "8.1",
+          "text": "Systematic reasoning using established legal principles",
+          "scores": {
+            "Hanafi": 1,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "8.2",
+          "text": "Balancing texts with public interest (maslahah)",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 1,
+            "Shafi'i": 0,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "8.3",
+          "text": "Strict adherence to methodology of usul al-fiqh",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 1,
+            "Hanbali": 0
+          }
+        },
+        {
+          "id": "8.4",
+          "text": "Following the understanding of the Salaf closely",
+          "scores": {
+            "Hanafi": 0,
+            "Maliki": 0,
+            "Shafi'i": 0,
+            "Hanbali": 1
+          }
+        }
+      ]
+    }
+  ],
+  "results": {
+    "Hanafi": {
+      "name": "Hanafi",
+      "description": "Your approach aligns with the Hanafi school, which emphasizes systematic reasoning (qiyas) and rational analysis in deriving rulings. The Hanafi madhhab values consistency and logical coherence in Islamic law."
+    },
+    "Maliki": {
+      "name": "Maliki",
+      "description": "Your approach aligns with the Maliki school, which gives significant weight to the practice of the people of Medina and considers public interest (maslahah) in legal rulings. The Maliki madhhab balances textual evidence with practical considerations."
+    },
+    "Shafi'i": {
+      "name": "Shafi'i",
+      "description": "Your approach aligns with the Shafi'i school, which follows a systematic methodology (usul al-fiqh) with strict conditions for accepting evidence. The Shafi'i madhhab emphasizes strong hadith authentication and careful reconciliation of sources."
+    },
+    "Hanbali": {
+      "name": "Hanbali",
+      "description": "Your approach aligns with the Hanbali school, which prioritizes direct textual evidence and the understanding of the early generations (Salaf). The Hanbali madhhab takes a cautious approach to analogical reasoning and emphasizes literal meanings of texts."
+    }
+  }
+}

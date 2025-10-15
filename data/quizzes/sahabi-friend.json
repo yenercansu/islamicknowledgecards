@@ -1,0 +1,536 @@
+{
+  "title": "Which Sahabi Would Be Your Best Friend?",
+  "description": "Discover which Companion of the Prophet ﷺ reflects your character traits and values most closely.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "What do you value most in a close friend?",
+      "options": [
+        {
+          "id": "1.1",
+          "text": "Loyalty and quiet support",
+          "scores": {
+            "AbuBakr": 1,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "1.2",
+          "text": "Strong sense of justice",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 1,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "1.3",
+          "text": "Generosity and calm presence",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 1,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "1.4",
+          "text": "Deep wisdom and counsel",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 1,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Your default role in a group",
+      "options": [
+        {
+          "id": "2.1",
+          "text": "The steady supporter who keeps things together",
+          "scores": {
+            "AbuBakr": 1,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "2.2",
+          "text": "The organizer who sets rules and moves things",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 1,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "2.3",
+          "text": "The sponsor who helps others succeed",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 1,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "2.4",
+          "text": "The advisor who solves hard questions",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 1,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "How do you handle conflict?",
+      "options": [
+        {
+          "id": "3.1",
+          "text": "De-escalate and remind of shared goals",
+          "scores": {
+            "AbuBakr": 1,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "3.2",
+          "text": "Address it directly and fairly",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 1,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "3.3",
+          "text": "Stay calm and seek reconciliation",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 1,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "3.4",
+          "text": "Analyze causes and propose a smart fix",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 1,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "What inspires you most in worship?",
+      "options": [
+        {
+          "id": "4.1",
+          "text": "Steadfast companionship and sacrifice",
+          "scores": {
+            "AbuBakr": 1,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "4.2",
+          "text": "Accountability and discipline",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 1,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "4.3",
+          "text": "Charity and modesty",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 1,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "4.4",
+          "text": "Knowledge and reflection",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 1,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Your learning style",
+      "options": [
+        {
+          "id": "5.1",
+          "text": "Learn by companionship and practice",
+          "scores": {
+            "AbuBakr": 1,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "5.2",
+          "text": "Learn by rules and structure",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 1,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "5.3",
+          "text": "Learn by serving and funding projects",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 1,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "5.4",
+          "text": "Learn by study and debate",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 1,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "A challenge appears with few resources",
+      "options": [
+        {
+          "id": "6.1",
+          "text": "Keep the team together and give morale",
+          "scores": {
+            "AbuBakr": 1,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "6.2",
+          "text": "Set clear steps and enforce order",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 1,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "6.3",
+          "text": "Contribute what you can and mobilize donors",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 1,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "6.4",
+          "text": "Invent a new path and optimize",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 1,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "What kind of friend do you need on tough days?",
+      "options": [
+        {
+          "id": "7.1",
+          "text": "One who stays by your side and lifts you up",
+          "scores": {
+            "AbuBakr": 1,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "7.2",
+          "text": "One who tells you the truth and has your back",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 1,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "7.3",
+          "text": "One who gives calmly and eases burdens",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 1,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "7.4",
+          "text": "One who thinks with you until it is solved",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 1,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Which quality do you admire in a community figure?",
+      "options": [
+        {
+          "id": "8.1",
+          "text": "Resilience and devotion in calling to prayer",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 1,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "8.2",
+          "text": "Strategic thinking and openness to new ideas",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 1,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 0
+          }
+        },
+        {
+          "id": "8.3",
+          "text": "Courage and rapid action",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 0,
+            "Khalid": 1
+          }
+        },
+        {
+          "id": "8.4",
+          "text": "Teaching the Quran with precision",
+          "scores": {
+            "AbuBakr": 0,
+            "Umar": 0,
+            "Uthman": 0,
+            "Ali": 0,
+            "Salman": 0,
+            "Bilal": 0,
+            "IbnMasud": 1,
+            "Khalid": 0
+          }
+        }
+      ]
+    }
+  ],
+  "results": {
+    "AbuBakr": {
+      "name": "Abu Bakr al-Siddiq (RA)",
+      "description": "Your best friend would be Abu Bakr al-Siddiq, known for his unwavering loyalty, quiet support, and steadfast companionship. Like him, you value trust, sacrifice, and being a reliable presence in the lives of those you care about."
+    },
+    "Umar": {
+      "name": "Umar ibn al-Khattab (RA)",
+      "description": "Your best friend would be Umar ibn al-Khattab, known for his strong sense of justice, direct communication, and accountability. Like him, you value fairness, structure, and speaking truth even when it's difficult."
+    },
+    "Uthman": {
+      "name": "Uthman ibn Affan (RA)",
+      "description": "Your best friend would be Uthman ibn Affan, known for his generosity, calm presence, and modesty. Like him, you value charity, reconciliation, and creating peace in your community."
+    },
+    "Ali": {
+      "name": "Ali ibn Abi Talib (RA)",
+      "description": "Your best friend would be Ali ibn Abi Talib, known for his deep wisdom, knowledge, and thoughtful counsel. Like him, you value reflection, study, and solving complex problems with intelligence."
+    },
+    "Salman": {
+      "name": "Salman al-Farisi (RA)",
+      "description": "Your best friend would be Salman al-Farisi, known for his strategic thinking, openness to new ideas, and innovative solutions. Like him, you value creativity, adaptability, and bridging different perspectives."
+    },
+    "Bilal": {
+      "name": "Bilal ibn Rabah (RA)",
+      "description": "Your best friend would be Bilal ibn Rabah, known for his resilience, devotion, and beautiful call to prayer. Like him, you value perseverance, faith, and inspiring others through your dedication."
+    },
+    "IbnMasud": {
+      "name": "Abdullah ibn Masud (RA)",
+      "description": "Your best friend would be Abdullah ibn Masud, known for his precise teaching of the Quran and deep knowledge. Like him, you value education, accuracy, and sharing wisdom with others."
+    },
+    "Khalid": {
+      "name": "Khalid ibn al-Walid (RA)",
+      "description": "Your best friend would be Khalid ibn al-Walid, known for his courage, rapid action, and strategic military genius. Like him, you value boldness, decisiveness, and taking swift action when needed."
+    }
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "title": "Ashari vs Maturidi vs Athari",
+  "description": "Test your theological orientation and discover which Sunni creed school your beliefs align with most.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "How do you understand Allah's attributes such as Hand, Face, and Eye?",
+      "options": [
+        {
+          "id": "1.1",
+          "text": "Affirm them as real but not like creation, avoiding any interpretation",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 0,
+            "Athari": 1
+          }
+        },
+        {
+          "id": "1.2",
+          "text": "Affirm them and interpret metaphorically if reason and language require",
+          "scores": {
+            "Ashari": 1,
+            "Maturidi": 0,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "1.3",
+          "text": "Affirm them but prefer rational harmony through linguistic ta'wil",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 1,
+            "Athari": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "What is the role of reason ('aql) in understanding belief (aqidah)?",
+      "options": [
+        {
+          "id": "2.1",
+          "text": "A supporting tool, but revelation is primary",
+          "scores": {
+            "Ashari": 1,
+            "Maturidi": 0,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "2.2",
+          "text": "A decisive tool for establishing belief before revelation",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 1,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "2.3",
+          "text": "Limited role, it cannot judge divine matters",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 0,
+            "Athari": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "How should apparent contradictions between reason and revelation be resolved?",
+      "options": [
+        {
+          "id": "3.1",
+          "text": "Revelation takes precedence and reason submits",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 0,
+            "Athari": 1
+          }
+        },
+        {
+          "id": "3.2",
+          "text": "Both must be reconciled through interpretation",
+          "scores": {
+            "Ashari": 1,
+            "Maturidi": 0,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "3.3",
+          "text": "Reason clarifies meaning within revelation's limits",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 1,
+            "Athari": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "How do you define human action and divine decree (qadar)?",
+      "options": [
+        {
+          "id": "4.1",
+          "text": "Humans acquire acts (kasb) created by Allah",
+          "scores": {
+            "Ashari": 1,
+            "Maturidi": 0,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "4.2",
+          "text": "Humans have real power granted by Allah, yet dependent",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 1,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "4.3",
+          "text": "All actions are created and willed directly by Allah",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 0,
+            "Athari": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "What is your stance on ta'wil (figurative interpretation)?",
+      "options": [
+        {
+          "id": "5.1",
+          "text": "Permitted only with necessity and linguistic proof",
+          "scores": {
+            "Ashari": 1,
+            "Maturidi": 0,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "5.2",
+          "text": "Used more broadly to maintain rational coherence",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 1,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "5.3",
+          "text": "Avoided; texts accepted without interpretation",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 0,
+            "Athari": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "How do you interpret Allah's speech (kalam Allah)?",
+      "options": [
+        {
+          "id": "6.1",
+          "text": "Uncreated in meaning but created in letters and sounds",
+          "scores": {
+            "Ashari": 1,
+            "Maturidi": 0,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "6.2",
+          "text": "Eternal both in meaning and type, expressed through created sounds",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 1,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "6.3",
+          "text": "Uncreated and literal, without distinction of type or sound",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 0,
+            "Athari": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "What defines true faith (iman)?",
+      "options": [
+        {
+          "id": "7.1",
+          "text": "Affirmation by tongue and heart; actions perfect but not define it",
+          "scores": {
+            "Ashari": 1,
+            "Maturidi": 0,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "7.2",
+          "text": "Affirmation by heart and tongue, actions reflect but not determine faith",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 1,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "7.3",
+          "text": "Belief, word, and deed together define faith and can increase or decrease",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 0,
+            "Athari": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "How should we classify a Muslim who commits a major sin?",
+      "options": [
+        {
+          "id": "8.1",
+          "text": "Still a believer; judged by Allah's will",
+          "scores": {
+            "Ashari": 1,
+            "Maturidi": 0,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "8.2",
+          "text": "Still a believer with deficient faith",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 1,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "8.3",
+          "text": "A believer but faith decreases; avoid takfir",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 0,
+            "Athari": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "What is the proper use of kalam (theological reasoning)?",
+      "options": [
+        {
+          "id": "9.1",
+          "text": "Necessary to defend belief and clarify ambiguities",
+          "scores": {
+            "Ashari": 1,
+            "Maturidi": 0,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "9.2",
+          "text": "Useful within reason's bounds and moral purpose",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 1,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "9.3",
+          "text": "Avoided entirely; it leads to misguidance",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 0,
+            "Athari": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "How do you view the relationship between revelation and science or philosophy?",
+      "options": [
+        {
+          "id": "10.1",
+          "text": "Compatible if revelation remains superior",
+          "scores": {
+            "Ashari": 1,
+            "Maturidi": 0,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "10.2",
+          "text": "Mutually supportive when reason stays moral",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 1,
+            "Athari": 0
+          }
+        },
+        {
+          "id": "10.3",
+          "text": "Philosophy is secondary; revelation is the ultimate guide",
+          "scores": {
+            "Ashari": 0,
+            "Maturidi": 0,
+            "Athari": 1
+          }
+        }
+      ]
+    }
+  ],
+  "results": {
+    "Ashari": {
+      "name": "Ashari",
+      "description": "Your theological orientation aligns most closely with the Ashari school. Asharis emphasize the use of reason to defend and clarify Islamic beliefs, while maintaining that revelation is primary. They use ta'wil (interpretation) when necessary and believe in the concept of kasb (acquisition) regarding human actions."
+    },
+    "Maturidi": {
+      "name": "Maturidi",
+      "description": "Your theological orientation aligns most closely with the Maturidi school. Maturidis give reason a more decisive role in establishing belief and use ta'wil more broadly to maintain rational coherence. They believe humans have real power granted by Allah and emphasize the harmony between reason and revelation."
+    },
+    "Athari": {
+      "name": "Athari",
+      "description": "Your theological orientation aligns most closely with the Athari school. Atharis emphasize accepting texts without interpretation (ta'wil), affirming Allah's attributes as they are mentioned without metaphorical interpretation. They believe revelation takes precedence over reason in matters of faith and that faith includes belief, word, and deed."
+    }
+  }
+}

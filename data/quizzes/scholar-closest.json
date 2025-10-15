@@ -1,0 +1,818 @@
+{
+  "title": "Which Scholar Are You Closest To",
+  "description": "Find the great Muslim thinker or scholar whose outlook and philosophy most resemble your own.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "When encountering a weak hadith in jurisprudence, what is your approach?",
+      "options": [
+        {
+          "id": "1.1",
+          "text": "Use it if supported by qiyas and general principles",
+          "scores": {
+            "AbuHanifa": 1,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "1.2",
+          "text": "Prefer practice of Medina and reject isolated weak reports",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 1,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "1.3",
+          "text": "Reject it when stronger hadith exist",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 1,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "1.4",
+          "text": "Accept it if no contradiction appears",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 1,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "1.5",
+          "text": "Interpret it spiritually, looking for moral lessons",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 1,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "1.6",
+          "text": "Accept it only if consistent with early authentic understanding",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "How should reason relate to revelation in legal reasoning?",
+      "options": [
+        {
+          "id": "2.1",
+          "text": "Reason clarifies revelation and builds consistent rulings",
+          "scores": {
+            "AbuHanifa": 1,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "2.2",
+          "text": "Reason operates within boundaries of transmitted practice",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 1,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "2.3",
+          "text": "Reason serves revelation, never leads it",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 1,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "2.4",
+          "text": "Reason should submit completely to transmitted texts",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 1,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "2.5",
+          "text": "Reason can refine understanding of revelation's aims",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 1,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "2.6",
+          "text": "Reason restores clarity to revelation when innovation distorts it",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "What is the correct stance toward speculative theology (kalam)?",
+      "options": [
+        {
+          "id": "3.1",
+          "text": "Useful if limited and grounded in Qur'an's rational proofs",
+          "scores": {
+            "AbuHanifa": 1,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "3.2",
+          "text": "Avoid deep speculation; rely on tradition and consensus",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 1,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "3.3",
+          "text": "Permit limited kalam for defending creed logically",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 1,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "3.4",
+          "text": "Reject kalam; adhere to transmitted reports only",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 1,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "3.5",
+          "text": "Use it to expose false reasoning and build spiritual insight",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 1,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "3.6",
+          "text": "Reject Greek-based kalam; defend creed through authentic texts",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "What is your reaction to philosophical challenges against faith?",
+      "options": [
+        {
+          "id": "4.1",
+          "text": "Refute them with reason and structured argumentation",
+          "scores": {
+            "AbuHanifa": 1,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "4.2",
+          "text": "Ignore unless they harm the public belief",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 1,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "4.3",
+          "text": "Refute them through textual precision and hadith",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 1,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "4.4",
+          "text": "Condemn speculation; return to clear scripture",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 1,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "4.5",
+          "text": "Engage them to purify belief intellectually and spiritually",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 1,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "4.6",
+          "text": "Respond with renewal and direct Quranic reasoning",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "What do you prioritize in fatwa derivation?",
+      "options": [
+        {
+          "id": "5.1",
+          "text": "General principles and analogical consistency",
+          "scores": {
+            "AbuHanifa": 1,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "5.2",
+          "text": "Transmitted practice of the people of Medina",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 1,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "5.3",
+          "text": "Hadith authenticity and systematic methodology",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 1,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "5.4",
+          "text": "Literal texts and minimal interpretation",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 1,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "5.5",
+          "text": "Spiritual wisdom and higher objectives of Shariah",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 1,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "5.6",
+          "text": "Salaf understanding and rejection of later innovations",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "How do you view Sufism and spiritual practices?",
+      "options": [
+        {
+          "id": "6.1",
+          "text": "Acceptable if grounded in fiqh and not excessive",
+          "scores": {
+            "AbuHanifa": 1,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "6.2",
+          "text": "Valued if aligned with transmitted practice",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 1,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "6.3",
+          "text": "Permissible within boundaries of Sunnah",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 1,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "6.4",
+          "text": "Cautious; prefer simple worship without elaboration",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 1,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "6.5",
+          "text": "Essential for purifying the heart and reaching God",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 1,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "6.6",
+          "text": "Reject innovations; accept only proven Prophetic practices",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "What is your approach to ijtihad (independent reasoning)?",
+      "options": [
+        {
+          "id": "7.1",
+          "text": "Encouraged for qualified scholars using systematic principles",
+          "scores": {
+            "AbuHanifa": 1,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "7.2",
+          "text": "Permitted but constrained by transmitted consensus",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 1,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "7.3",
+          "text": "Necessary but must follow rigorous methodology",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 1,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "7.4",
+          "text": "Limited; prefer following transmitted reports",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 1,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "7.5",
+          "text": "Valuable when guided by spiritual insight and wisdom",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 1,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "7.6",
+          "text": "Open but must align with Salaf understanding",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "How do you approach differences among scholars?",
+      "options": [
+        {
+          "id": "8.1",
+          "text": "Respect diversity; seek coherence through principles",
+          "scores": {
+            "AbuHanifa": 1,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "8.2",
+          "text": "Accept differences within transmitted boundaries",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 1,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "8.3",
+          "text": "Analyze methodologies to determine strongest view",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 1,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "8.4",
+          "text": "Follow the view closest to literal texts",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 1,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "8.5",
+          "text": "Seek the view that best serves spiritual growth",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 1,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "8.6",
+          "text": "Prefer the view of early generations over later ones",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "What is your view on taqlid (following a school)?",
+      "options": [
+        {
+          "id": "9.1",
+          "text": "Necessary for laypeople; scholars may engage in ijtihad",
+          "scores": {
+            "AbuHanifa": 1,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "9.2",
+          "text": "Acceptable if rooted in transmitted practice",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 1,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "9.3",
+          "text": "Valid for non-scholars; scholars should verify evidence",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 1,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "9.4",
+          "text": "Permissible but evidence should be sought when possible",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 1,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "9.5",
+          "text": "Useful for beginners; spiritual maturity transcends it",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 1,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "9.6",
+          "text": "Acceptable if the school aligns with Salaf methodology",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "What is your stance on bid'ah (innovation)?",
+      "options": [
+        {
+          "id": "10.1",
+          "text": "Distinguish between good and bad innovation based on principles",
+          "scores": {
+            "AbuHanifa": 1,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "10.2",
+          "text": "Reject what contradicts transmitted practice",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 1,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "10.3",
+          "text": "Evaluate based on evidence and methodology",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 1,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "10.4",
+          "text": "All religious innovation is misguidance",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 1,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "10.5",
+          "text": "Judge by spiritual fruit and alignment with Shariah aims",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 1,
+            "IbnTaymiyyah": 0
+          }
+        },
+        {
+          "id": "10.6",
+          "text": "Reject all innovation; return to pure Prophetic practice",
+          "scores": {
+            "AbuHanifa": 0,
+            "Malik": 0,
+            "Shafii": 0,
+            "Ahmad": 0,
+            "Ghazali": 0,
+            "IbnTaymiyyah": 1
+          }
+        }
+      ]
+    }
+  ],
+  "scholars": [
+    {
+      "id": "AbuHanifa",
+      "name": "Abu Hanifa",
+      "description": "Known for his emphasis on reason, systematic principles, and analogical reasoning in Islamic jurisprudence."
+    },
+    {
+      "id": "Malik",
+      "name": "Imam Malik",
+      "description": "Emphasized the practice of the people of Medina and transmitted traditions as primary sources of law."
+    },
+    {
+      "id": "Shafii",
+      "name": "Imam al-Shafi'i",
+      "description": "Developed a systematic methodology for Islamic jurisprudence, emphasizing hadith authenticity and rigorous analysis."
+    },
+    {
+      "id": "Ahmad",
+      "name": "Imam Ahmad ibn Hanbal",
+      "description": "Known for his strict adherence to transmitted texts and minimal use of personal reasoning in jurisprudence."
+    },
+    {
+      "id": "Ghazali",
+      "name": "Imam al-Ghazali",
+      "description": "Combined Islamic law with spirituality, emphasizing the purification of the heart and higher objectives of Shariah."
+    },
+    {
+      "id": "IbnTaymiyyah",
+      "name": "Ibn Taymiyyah",
+      "description": "Advocated for returning to the understanding of the early generations (Salaf) and rejecting later innovations."
+    }
+  ]
+}
