@@ -133,8 +133,8 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <main className="mx-auto max-w-7xl px-3 sm:px-6 py-4 sm:py-8">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      <main className="mx-auto max-w-7xl px-3 sm:px-6 py-4 sm:py-8 flex-1">
         <section className="mb-8 sm:mb-12">
           <div className="rounded-3xl bg-gradient-to-br from-teal-100 to-cyan-100 p-4 sm:p-8 border-teal-200 border-2 shadow-lg">
             <div className="flex items-start gap-2 sm:gap-3 mb-3 sm:mb-4">
@@ -183,6 +183,42 @@ export default function HomePage() {
           </div>
         </section>
       </main>
+
+      <footer className="bg-white border-t border-gray-200 mt-12">
+        <div className="mx-auto max-w-7xl px-3 sm:px-6 py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900 mb-1">contact info</h3>
+              <a
+                href="mailto:info@islamicknowledgecards.com"
+                className="text-sm text-gray-600 hover:text-teal-600 transition-colors"
+              >
+                info@islamicknowledgecards.com
+              </a>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900 mb-1">instagram</h3>
+              <a
+                href="https://instagram.com/islamicknowledgecards"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-600 hover:text-teal-600 transition-colors"
+              >
+                @islamicknowledgecards
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-6 pt-4 border-t border-gray-200 text-right">
+            <p className="text-xs text-gray-500">
+              created by, Volunteers of <span className="font-semibold">Kim Vakfi: Farah &amp; Friends</span>
+              <br />
+              all rights reserved
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

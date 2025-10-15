@@ -237,7 +237,7 @@ export default function GameCard({
               className={`absolute inset-0 backface-hidden rounded-3xl border ${isCorrect ? "border-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.5)]" : "border-black/10"} bg-white shadow-xl p-4 sm:p-8 text-slate-900`}
               style={{ transform: "rotateY(180deg)" }}
             >
-              <div className="h-full grid grid-cols-1 md:grid-cols-[1fr_3px_1fr] gap-4 sm:gap-6 items-center text-center overflow-y-auto">
+              <div className="h-full grid grid-cols-1 md:grid-cols-[1fr_3px_1fr] gap-4 sm:gap-6 items-center text-center overflow-y-auto font-sans">
                 <div className="p-2 sm:p-4">
                   <div className="text-xs sm:text-sm font-bold mb-2">Answer A</div>
                   <div className="text-sm sm:text-base leading-relaxed">{card.explanationA}</div>

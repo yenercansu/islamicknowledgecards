@@ -4,6 +4,7 @@ import { useMemo, useState } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { ChevronLeft } from "lucide-react"
+import Footer from "@/components/footer"
 
 type Mode = "landing" | "signin" | "signup"
 
@@ -59,7 +60,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white relative">
+    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white relative flex flex-col">
       <div className="absolute left-4 top-4 z-10">
         <button
           onClick={() => router.back()}
@@ -70,8 +71,8 @@ export default function LoginPage() {
         </button>
       </div>
 
-      <div className="w-full max-w-md mx-auto px-6 py-20">
-        <div className="rounded-2xl shadow-lg bg-white p-8">
+      <div className="w-full max-w-md mx-auto px-6 py-20 flex-1">
+        <div className="rounded-2xl shadow-lg bg-white p-8 font-sans">
           <h1 className="text-2xl font-semibold text-center mb-2">Islamic Studies</h1>
           <p className="text-center text-sm text-gray-600 mb-6">Sign in to access your flashcards</p>
 
@@ -249,6 +250,8 @@ export default function LoginPage() {
           )}
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }
