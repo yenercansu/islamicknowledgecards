@@ -105,7 +105,7 @@ export default function MadhhabFitQuiz() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-teal-400 to-teal-600 p-4 sm:p-6">
         <div className="max-w-3xl mx-auto pt-16">
-          <div className="rounded-3xl bg-white p-6 sm:p-8 border-2 border-teal-200 shadow-lg">
+          <div className="rounded-3xl bg-white p-6 sm:p-8 border-2 border-teal-200 shadow-lg font-sans">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center">Your Results</h2>
 
             <div className="mb-8 p-6 rounded-2xl bg-gradient-to-br from-teal-50 to-cyan-50 border-2 border-teal-200">
@@ -166,13 +166,13 @@ export default function MadhhabFitQuiz() {
 
         {/* Question Counter */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2">
-          <div className="px-6 py-2 rounded-full bg-white/25 text-white backdrop-blur font-medium">
+          <div className="px-6 py-2 rounded-full bg-white/25 text-white backdrop-blur font-medium font-sans">
             Question {currentQuestion + 1} of {shuffledQuestions.length}
           </div>
         </div>
 
         {/* Quiz Card */}
-        <div className="rounded-3xl bg-white p-6 sm:p-8 border-2 border-teal-200 shadow-lg">
+        <div className="rounded-3xl bg-white p-6 sm:p-8 border-2 border-teal-200 shadow-lg font-sans">
           {/* Progress Bar */}
           <div className="mb-6">
             <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
