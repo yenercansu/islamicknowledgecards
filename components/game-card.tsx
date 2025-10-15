@@ -253,18 +253,18 @@ export default function GameCard({
         </div>
       </div>
 
-      <div className="fixed bottom-3 sm:bottom-4 left-0 right-0 px-3 sm:px-4">
+      <div className="fixed bottom-3 sm:bottom-4 left-0 right-0 px-3 sm:px-4 font-sans">
         <div className="grid grid-cols-3 gap-2 sm:gap-3 max-w-[720px] mx-auto">
           <button
             onClick={goPrev}
-            className="h-11 sm:h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold text-sm sm:text-base"
+            className="h-11 sm:h-12 rounded-2xl hover:bg-white/30 backdrop-blur text-white font-semibold text-sm sm:text-base font-sans bg-primary border-[3px] border-emerald-700"
           >
             Back
           </button>
 
           <button
             onClick={goRandom}
-            className="h-11 sm:h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold flex items-center justify-center gap-1 sm:gap-2 font-sans text-sm sm:text-base"
+            className="h-11 sm:h-12 rounded-2xl hover:bg-white/30 backdrop-blur text-white font-semibold flex items-center justify-center gap-1 sm:gap-2 font-sans text-sm sm:text-base bg-[rgba(0,100,84,1)] border-emerald-200 border-2"
             aria-label="Randomize"
             title="Randomize question"
           >
@@ -283,7 +283,7 @@ export default function GameCard({
 
           <button
             onClick={goNext}
-            className="h-11 sm:h-12 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur text-white font-semibold font-sans text-sm sm:text-base"
+            className="h-11 sm:h-12 rounded-2xl hover:bg-white/30 backdrop-blur text-white font-semibold font-sans text-sm sm:text-base bg-primary border-emerald-700 border-2"
           >
             Next
           </button>
